@@ -232,59 +232,19 @@ function initApp() {
   }
 }
 
-// --- 8. Unified Add-to-Cart & Slide-In Drawer Controller ---
-window.addToCartAction = function(btnElement) {
-  // Visual button feedback
-  if (btnElement) {
-    const originalHtml = btnElement.innerHTML;
-    btnElement.innerHTML = '<span>✓ In den Warenkorb gelegt!</span>';
-    btnElement.style.background = '#059669';
-    setTimeout(() => {
-      btnElement.innerHTML = originalHtml;
-      btnElement.style.background = '';
-    }, 2000);
-  }
-
-  // Update floating cart badge and header badge
-  const floatingBtn = document.getElementById('floatingCartBtn');
-  if (floatingBtn) floatingBtn.classList.add('visible');
-
-  const headerBadges = document.querySelectorAll('.cart-badge, [data-testid*="cart-badge"], .floating-cart-badge');
-  headerBadges.forEach(b => { b.textContent = '1'; });
-
-  // Open Drawer smoothly
-  window.openCartDrawer();
-};
-
-window.openCartDrawer = function() {
-  const drawer = document.getElementById('cartDrawer');
-  const backdrop = document.getElementById('cartDrawerBackdrop');
-  if (drawer && backdrop) {
-    backdrop.classList.add('active');
-    drawer.classList.add('active');
-    document.body.style.overflow = 'hidden';
-  }
-};
-
-window.closeCartDrawer = function() {
-  const drawer = document.getElementById('cartDrawer');
-  const backdrop = document.getElementById('cartDrawerBackdrop');
-  if (drawer && backdrop) {
-    backdrop.classList.remove('active');
-    drawer.classList.remove('active');
-    document.body.style.overflow = '';
-  }
-};
-
-window.proceedToWixCheckout = function(e) {
+// --- 8. Variante B: Open Wix Native Cart Sidebar ---
+window.triggerWixCart = function(e) {
   if (e) e.preventDefault();
-  // Navigates directly to Wix Cart / Checkout
-  window.top.location.href = "https://www.immoanalysis.de/cart";
-};
 
-// Close on ESC key
-document.addEventListener('keydown', (e) => {
-  if (e.key === 'Escape') {
-    window.closeCartDrawer();
+  // 1. Suche das native Wix-Warenkorb-Icon im Header
+  const wixCart = document.querySelector(
+    '#SITE_HEADER a[href*="cart"], #SITE_HEADER button[aria-label*="Warenkorb" i], #SITE_HEADER button[aria-label*="Cart" i], #SITE_HEADER [data-testid*="cart" i], header a[href*="cart"], header [data-testid*="cart" i], [data-mesh-id*="cart"]'
+  );
+
+  if (wixCart) {
+    wixCart.click();
+  } else {
+    // Falls das Menü noch nicht voll geladen ist: Fallback direkt zum Warenkorb
+    window.top.location.href = "https://www.immoanalysis.de/cart";
   }
-});
+};
