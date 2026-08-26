@@ -77,28 +77,37 @@ window.setToolSlide = function(toolKey, index, event) {
   window.updateToolSlider(toolKey);
 };
 
-// --- Add-to-Cart Feedback & Toast Controller ---
+// --- 8. Native Wix Store #addToCartButton1 Integration ---
 window.addToCartFeedback = function(btnElement) {
-  // 1. Visual button animation
+  // 1. Klicke den echten, nativen Wix-Button im Hintergrund an
+  const wixNativeBtn = document.getElementById('addToCartButton1') || 
+                       document.querySelector('[id*="addToCartButton"], [data-hook="add-to-cart"], [data-testid="add-to-cart"]');
+
+  if (wixNativeBtn) {
+    // Klicke den echten Wix-Shop-Button an
+    wixNativeBtn.click();
+  }
+
+  // 2. Visuelles Feedback auf unserem Button
   if (btnElement) {
-    const originalHtml = btnElement.innerHTML;
+    const originalText = btnElement.innerHTML;
     btnElement.innerHTML = '<span>✓ Im Warenkorb!</span>';
     btnElement.style.background = '#ECFDF5';
     btnElement.style.borderColor = '#10B981';
     btnElement.style.color = '#065F46';
     setTimeout(() => {
-      btnElement.innerHTML = originalHtml;
+      btnElement.innerHTML = originalText;
       btnElement.style.background = '';
       btnElement.style.borderColor = '';
       btnElement.style.color = '';
     }, 2500);
   }
 
-  // 2. Update all Cart badges
+  // 3. Header-Cart-Badge aktualisieren
   const headerBadges = document.querySelectorAll('.cart-badge, [data-testid*="cart-badge"], .floating-cart-badge');
   headerBadges.forEach(b => { b.textContent = '1'; });
 
-  // 3. Show Styled Toast Notification
+  // 4. Toast Notification einblenden
   const toast = document.getElementById('cartToastNotification');
   if (toast) {
     toast.style.transform = 'translateY(0)';
@@ -115,6 +124,21 @@ window.hideCartToast = function() {
   if (toast) {
     toast.style.transform = 'translateY(150%)';
     toast.style.opacity = '0';
+  }
+};
+
+// Express Direkt-Kauf: Erst in Wix-Warenkorb legen, dann direkt zur Kasse leiten
+window.directBuyAction = function(e) {
+  if (e) e.preventDefault();
+  const wixNativeBtn = document.getElementById('addToCartButton1') || 
+                       document.querySelector('[id*="addToCartButton"], [data-hook="add-to-cart"]');
+  if (wixNativeBtn) {
+    wixNativeBtn.click();
+    setTimeout(() => {
+      window.top.location.href = "https://www.immoanalysis.de/cart";
+    }, 400);
+  } else {
+    window.top.location.href = "https://www.immoanalysis.de/product-page/immobundle";
   }
 };
 
