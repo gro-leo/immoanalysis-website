@@ -53,15 +53,12 @@
           </div>
 
           <div class="hero-cta-group" style="display: flex; align-items: center; gap: 1rem; flex-wrap: wrap;">
-            <a href="https://www.immoanalysis.de/product-page/immobundle" onclick="directBuyAction(event)" target="_top" class="btn btn-emerald btn-lg hero-btn-primary" id="hero-buy-now-btn" style="background: linear-gradient(135deg, #10B981 0%, #059669 100%); color: #FFFFFF; font-weight: 800; text-decoration: none; padding: 1rem 1.75rem; border-radius: 10px; box-shadow: 0 4px 15px rgba(16, 185, 129, 0.35); display: inline-flex; align-items: center; gap: 0.5rem;">
-              <span>⚡ Jetzt direkt kaufen (39,95 €)</span>
+            <a href="#pricing" class="btn btn-emerald btn-lg hero-btn-primary" id="hero-buy-now-btn" style="background: linear-gradient(135deg, #10B981 0%, #059669 100%); color: #FFFFFF; font-weight: 800; text-decoration: none; padding: 1rem 1.75rem; border-radius: 10px; box-shadow: 0 4px 15px rgba(16, 185, 129, 0.35); display: inline-flex; align-items: center; gap: 0.5rem;">
+              <span>⚡ Jetzt immoBUNDLE sichern (39,95 €)</span>
               <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M4.16663 10H15.8333M15.8333 10L10.8333 5M15.8333 10L10.8333 15" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
               </svg>
             </a>
-            <button class="btn btn-slate-outline btn-lg hero-btn-secondary" onclick="addToCartFeedback(this)" id="hero-cart-btn" style="background: #FFFFFF; color: #1E293B; border: 1.5px solid #CBD5E1; font-weight: 700; padding: 0.95rem 1.4rem; border-radius: 10px; cursor: pointer; display: inline-flex; align-items: center; gap: 0.4rem;">
-              <span>🛒 In den Warenkorb</span>
-            </button>
           </div>
         </div>
 
@@ -1222,22 +1219,13 @@
             <span class="order-total-price">39,95 €</span>
           </div>
 
-          <div class="order-cta-group" style="display: flex; flex-direction: column; gap: 0.65rem;">
-            <a href="https://www.immoanalysis.de/product-page/immobundle" onclick="directBuyAction(event)" target="_top" class="btn btn-emerald btn-block btn-lg pulse-animation" id="checkout-btn" style="background: linear-gradient(135deg, #10B981 0%, #059669 100%); color: #FFFFFF; font-weight: 800; font-size: 1.1rem; text-decoration: none; padding: 1.1rem 1.5rem; border-radius: 10px; box-shadow: 0 4px 15px rgba(16, 185, 129, 0.35); display: flex; align-items: center; justify-content: center; gap: 0.5rem; width: 100%; box-sizing: border-box;">
-              <span>⚡ Jetzt direkt kaufen (39,95 €)</span> ➔
-            </a>
-            <button class="btn btn-slate-outline btn-block btn-md" onclick="addToCartFeedback(this)" id="order-cart-btn" style="background: #FFFFFF; color: #1E293B; border: 1.5px solid #CBD5E1; font-weight: 700; padding: 0.8rem 1.2rem; border-radius: 10px; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 0.4rem; width: 100%; box-sizing: border-box;">
-              <span>🛒 In den Warenkorb legen</span>
-            </button>
-          </div>
-
-          <!-- Payment Icons -->
-          <div style="text-align: center; margin-top: 0.5rem;">
-            <span style="font-size: 0.75rem; color: #64748B; display: block; margin-bottom: 0.4rem;">Sichere Bezahlung
-              via:</span>
-            <div class="payment-methods-row" style="font-size: 0.8125rem; font-weight: 600; color: #475569;">
-              <span>PayPal</span> • <span>Kreditkarte</span> • <span>Klarna</span> • <span>Apple Pay</span> •
-              <span>SEPA</span>
+          <!-- Native Wix Cart Button Slot (Weg 2) -->
+          <div class="order-cta-group" id="orderCtaGroup">
+            <div id="wix-native-cart-slot" class="wix-native-cart-slot" style="min-height: 52px; width: 100%;">
+              <!-- Fallback button until Wix button docks -->
+              <a href="https://www.immoanalysis.de/product-page/immobundle" target="_top" class="btn btn-emerald btn-block btn-lg pulse-animation" id="checkout-btn" style="background: linear-gradient(135deg, #10B981 0%, #059669 100%); color: #FFFFFF; font-weight: 800; font-size: 1.1rem; text-decoration: none; padding: 1.1rem 1.5rem; border-radius: 10px; box-shadow: 0 4px 15px rgba(16, 185, 129, 0.35); display: flex; align-items: center; justify-content: center; gap: 0.5rem; width: 100%; box-sizing: border-box;">
+                <span>In den Warenkorb (39,95 €)</span> ➔
+              </a>
             </div>
           </div>
         </div>
@@ -1278,40 +1266,19 @@
   </div>
 
 <script>
-window.addToCartFeedback = function(btnElement) {
-  if (btnElement) {
-    var orig = btnElement.innerHTML;
-    btnElement.innerHTML = '<span>✓ Im Warenkorb!</span>';
-    btnElement.style.background = '#ECFDF5';
-    btnElement.style.borderColor = '#10B981';
-    btnElement.style.color = '#065F46';
-    setTimeout(function() {
-      btnElement.innerHTML = orig;
-      btnElement.style.background = '';
-      btnElement.style.borderColor = '';
-      btnElement.style.color = '';
-    }, 2500);
+function dockWixButton() {
+  const wixBtn = document.getElementById('addToCartButton1') || 
+                 document.querySelector('[id*="addToCartButton"], [data-hook="add-to-cart"]');
+  const slot = document.getElementById('wix-native-cart-slot');
+  if (wixBtn && slot && !slot.contains(wixBtn)) {
+    slot.innerHTML = '';
+    wixBtn.style.display = 'block';
+    wixBtn.style.visibility = 'visible';
+    wixBtn.style.width = '100%';
+    slot.appendChild(wixBtn);
   }
-
-  var headerBadges = document.querySelectorAll('.cart-badge, [data-testid*="cart-badge"], .floating-cart-badge');
-  headerBadges.forEach(function(b) { b.textContent = '1'; });
-
-  var toast = document.getElementById('cartToastNotification');
-  if (toast) {
-    toast.style.transform = 'translateY(0)';
-    toast.style.opacity = '1';
-    clearTimeout(window.toastTimer);
-    window.toastTimer = setTimeout(function() {
-      window.hideCartToast();
-    }, 6000);
-  }
-};
-
-window.hideCartToast = function() {
-  var toast = document.getElementById('cartToastNotification');
-  if (toast) {
-    toast.style.transform = 'translateY(150%)';
-    toast.style.opacity = '0';
-  }
-};
+}
+dockWixButton();
+const dockInterval = setInterval(dockWixButton, 600);
+setTimeout(() => clearInterval(dockInterval), 15000);
 </script>
