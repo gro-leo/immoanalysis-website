@@ -1,0 +1,244 @@
+/* ==========================================================================
+   immoANALYSIS - Responsive Layout Styles (Homepage Brand Aligned)
+   ========================================================================== */
+
+/* --- Tablet & Medium Screens (max-width: 1024px) --- */
+@media (max-width: 1024px) {
+  .hero-grid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    text-align: center;
+  }
+
+  .hero-tool-pills {
+    justify-content: center;
+  }
+
+  .hero-pricing-action {
+    justify-content: center;
+  }
+
+  .floating-stat-1 {
+    right: 2%;
+  }
+
+  .floating-stat-2 {
+    left: 2%;
+  }
+
+  .trust-items {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem;
+  }
+
+  .concept-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+
+  .cockpit-wrapper {
+    grid-template-columns: 1fr;
+    gap: 1.75rem;
+    padding: 1.5rem;
+  }
+
+  .calculator-card {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+    padding: 2.5rem;
+  }
+
+  .audience-grid, .testimonials-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .final-cta-card {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+    padding: 2.5rem;
+    text-align: center;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 2.5rem;
+  }
+}
+
+/* --- Mobile Screens (max-width: 768px) --- */
+@media (max-width: 768px) {
+  :root {
+    --header-height: 68px;
+    --section-padding-y: var(--section-padding-y-mobile);
+  }
+
+  .nav-menu {
+    position: fixed;
+    top: var(--header-height);
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #FFFFFF;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    padding: 1.5rem;
+    overflow-y: auto;
+    transform: translateX(100%);
+    transition: transform var(--transition-normal);
+    box-shadow: var(--shadow-xl);
+  }
+
+  .nav-menu.open {
+    transform: translateX(0);
+  }
+
+  .nav-item {
+    border-bottom: 1px solid var(--border-light);
+  }
+
+  .nav-link {
+    padding: 1rem 0;
+    font-size: var(--font-size-base);
+    color: var(--text-main);
+    justify-content: space-between;
+  }
+
+  .nav-dropdown {
+    position: static;
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+    background: var(--bg-surface-subtle);
+    border: none;
+    box-shadow: none;
+    padding-left: 1rem;
+    display: none;
+  }
+
+  .nav-item.dropdown-open .nav-dropdown {
+    display: block;
+  }
+
+  .mobile-menu-toggle {
+    display: block;
+  }
+
+  .header-actions .btn-sm {
+    display: none;
+  }
+
+  .hero-title {
+    font-size: 2.1rem;
+  }
+
+  .hero-subtitle {
+    font-size: var(--font-size-base);
+  }
+
+  .hero-pricing-action {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .hero-pricing-action .btn {
+    width: 100%;
+  }
+
+  .trust-items {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .concept-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .problem-solution-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .cost-comparison-box {
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+  }
+
+  .tool-feature-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .tools-tabs-nav {
+    flex-direction: column;
+  }
+
+  .tool-tab-btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .calculator-card {
+    padding: 1.5rem;
+  }
+
+  .calc-results-box {
+    padding: 1.5rem;
+  }
+
+  .final-cta-card {
+    padding: 1.75rem;
+  }
+
+  .final-order-box {
+    padding: 1.5rem;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+  }
+
+  .sticky-bar-container {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .sticky-bar-info {
+    font-size: var(--font-size-sm);
+  }
+
+  .sticky-bottom-bar .btn {
+    width: 100%;
+    padding: 0.65rem 1rem;
+    font-size: var(--font-size-sm);
+  }
+}
+
+/* --- Small Mobile (max-width: 480px) --- */
+@media (max-width: 480px) {
+  .section-header h2 {
+    font-size: 1.75rem;
+  }
+
+  .price-current {
+    font-size: 2rem;
+  }
+
+  .floating-stat {
+    position: static;
+    margin-top: 1rem;
+    animation: none;
+    transform: none !important;
+  }
+
+  .hero-visual {
+    flex-direction: column;
+  }
+}

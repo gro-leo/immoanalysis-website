@@ -1,0 +1,1450 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>immoBUNDLE - alle immoANALYSIS-Tools im praktischen Gesamtpaket</title>
+  <meta name="description"
+    content="Mit unserem Gesamtpaket aus vier Vorlagen für Microsoft Excel analysierst du Immobilien ganzheitlich und triffst fundierte Kaufentscheidungen: immoCALC, immoCHECK, immoPLACE und immoFINANCE für 39,95 € statt 53,80 €.">
+  <meta name="keywords"
+    content="immoBUNDLE, immoCALC, immoCHECK, immoPLACE, immoFINANCE, Immobilienanalyse Excel, Immobilienrechner, Zustandsbewertung, Standortanalyse">
+
+  <!-- Open Graph / Social Media -->
+  <meta property="og:title" content="immoBUNDLE - alle immoANALYSIS-Tools im praktischen Gesamtpaket">
+  <meta property="og:description"
+    content="Mit unserem Gesamtpaket aus vier Vorlagen für Microsoft Excel analysierst du Immobilien ganzheitlich und triffst fundierte Kaufentscheidungen.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.immoanalysis.de/immobundle">
+  <meta property="og:image" content="assets/images/bundle_hero_overview.jpg">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="assets/images/favicon.png">
+  <link rel="apple-touch-icon" href="assets/images/favicon.png">
+
+  <!-- Google Fonts: Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap"
+    rel="stylesheet">
+
+  <!-- CSS Stylesheets -->
+  <link rel="stylesheet" href="css/design-tokens.css?v=8.4">
+  <link rel="stylesheet" href="css/components.css?v=8.4">
+  <link rel="stylesheet" href="css/responsive.css?v=8.4">
+</head>
+
+<body>
+
+  <!-- =========================================================================
+       1. HEADER & NAVIGATION (Original Homepage Navigation)
+       ========================================================================= -->
+  <header class="site-header" id="header">
+    <div class="container header-container">
+
+      <!-- Brand Logo -->
+      <a href="https://www.immoanalysis.de" class="brand-logo" aria-label="immoANALYSIS Startseite">
+        <img src="assets/images/logo.png" alt="immoANALYSIS Logo" width="180" height="40">
+      </a>
+
+      <!-- Navigation Menu -->
+      <nav class="nav-wrapper" aria-label="Hauptnavigation">
+        <ul class="nav-menu">
+          <li class="nav-item">
+            <a href="https://www.immoanalysis.de/ratgeber-immobilien-finanzierung" class="nav-link">RATGEBER ▾</a>
+            <ul class="nav-dropdown">
+              <li><a href="https://www.immoanalysis.de/ratgeber-immobilien-finanzierung"
+                  class="dropdown-link">Finanzierung</a></li>
+              <li><a href="https://www.immoanalysis.de/ratgeber-immobilien-suche-und-auswahl"
+                  class="dropdown-link">Suche und Auswahl</a></li>
+              <li><a href="https://www.immoanalysis.de/ratgeber-immobilien-steuern" class="dropdown-link">Rechtliches
+                  und Steuern</a></li>
+              <li><a href="https://www.immoanalysis.de/ratgeber-immobilien-bauen" class="dropdown-link">Bauen</a></li>
+              <li><a href="https://www.immoanalysis.de/ratgeber-immobilien-kapitalanlage"
+                  class="dropdown-link">Kapitalanlage und Vermietung</a></li>
+              <li><a href="https://www.immoanalysis.de/ratgeber-immobilien-verwaltung"
+                  class="dropdown-link">Modernisierung und Verwaltung</a></li>
+              <li><a href="https://www.immoanalysis.de/immowiki" class="dropdown-link">immoWIKI &amp; Glossar</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a href="#calculator" class="nav-link">RECHNER ▾</a>
+            <ul class="nav-dropdown">
+              <li><a href="#calculator" class="dropdown-link">Schnell-Renditerechner (Live)</a></li>
+              <li><a href="https://www.immoanalysis.de/budgetrechner" class="dropdown-link">Budgetrechner: Maximale
+                  Kredithöhe</a></li>
+              <li><a href="https://www.immoanalysis.de/darlehensrechner" class="dropdown-link">Darlehensrechner:
+                  Tilgungsplan</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a href="#tools" class="nav-link active">PRODUKTE ▾</a>
+            <ul class="nav-dropdown">
+              <li><a href="#video" class="dropdown-link">🎬 Video-Tour ansehen</a></li>
+              <li><a href="#tools" class="dropdown-link" onclick="switchToolTab('tab-calc')">📊 immoCALC
+                  (Wirtschaftlichkeit)</a></li>
+              <li><a href="#tools" class="dropdown-link" onclick="switchToolTab('tab-check')">🔍 immoCHECK (Zustand)</a>
+              </li>
+              <li><a href="#tools" class="dropdown-link" onclick="switchToolTab('tab-place')">📍 immoPLACE
+                  (Standort)</a></li>
+              <li><a href="#tools" class="dropdown-link" onclick="switchToolTab('tab-finance')">🏦 immoFINANCE
+                  (Finanzierung)</a></li>
+              <li style="border-top: 1px solid var(--border-light); margin-top: 0.25rem; padding-top: 0.25rem;">
+                <a href="#pricing" class="dropdown-link"
+                  style="color: var(--color-slate-primary); font-weight: bold;">💎 immoBUNDLE (Komplettpaket)</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a href="https://www.immoanalysis.de/ueber-uns" class="nav-link">ÜBER UNS</a>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- Header Actions: Cart, Login, CTA Button -->
+      <div class="header-actions">
+        <a href="#pricing" class="header-meta-link" title="Warenkorb">
+          🛒 <span class="cart-badge">0</span>
+        </a>
+        <a href="https://www.immoanalysis.de" class="header-meta-link" title="Anmelden">
+          👤 <span style="font-size: 0.8rem;">Anmelden</span>
+        </a>
+        <a href="#pricing" class="btn btn-slate btn-sm">In den Warenkorb (39,95 €)</a>
+        <button class="mobile-menu-toggle" aria-label="Menü öffnen" aria-expanded="false">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- =========================================================================
+       2. HERO SECTION (100% Produkt-Klarheit & Saubere Ästhetik)
+       ========================================================================= -->
+  <section class="hero-section" id="hero">
+    <div class="container hero-grid">
+
+      <!-- Left: Value Proposition & Copy (100% Produkt-Klarheit) -->
+      <div class="hero-content">
+        <h1 class="hero-title">
+          <span class="hero-title-brand">immoBUNDLE</span>
+          <span class="hero-title-blue-sub">Das Komplettpaket zur ganzheitlichen Immobilienanalyse.</span>
+        </h1>
+
+        <p class="hero-subtitle">
+          4 praxiserprobte Vorlagen für Microsoft Excel in einem abgestimmten Gesamtpaket. Berechne Rendite &amp; Cashflow, prüfe die Bausubstanz, bewerte den Standort und bereite deine Finanzierung vor – für fundierte und sichere Kaufentscheidungen.
+        </p>
+
+        <!-- 1. Sleek Included Suite Pills Grid with Full Descriptive Titles -->
+        <div class="hero-suite-bar">
+          <span class="suite-bar-label">Enthaltene Tools im Komplettpaket:</span>
+          <div class="suite-bar-pills-grid">
+            <a href="#tools" class="suite-pill-card" onclick="switchCockpitTool('calc')" title="immoCALC zur Immobilienkalkulation ansehen">
+              <span class="suite-pill-icon">📊</span>
+              <span class="suite-pill-text"><strong>immoCALC</strong> zur Immobilienkalkulation</span>
+              <span class="suite-pill-arrow">➔</span>
+            </a>
+            <a href="#tools" class="suite-pill-card" onclick="switchCockpitTool('check')" title="immoCHECK zur Zustandsbewertung ansehen">
+              <span class="suite-pill-icon">🔍</span>
+              <span class="suite-pill-text"><strong>immoCHECK</strong> zur Zustandsbewertung</span>
+              <span class="suite-pill-arrow">➔</span>
+            </a>
+            <a href="#tools" class="suite-pill-card" onclick="switchCockpitTool('place')" title="immoPLACE zur Standortanalyse ansehen">
+              <span class="suite-pill-icon">📍</span>
+              <span class="suite-pill-text"><strong>immoPLACE</strong> zur Standortanalyse</span>
+              <span class="suite-pill-arrow">➔</span>
+            </a>
+            <a href="#tools" class="suite-pill-card" onclick="switchCockpitTool('finance')" title="immoFINANCE zur Finanzierungsvorbereitung ansehen">
+              <span class="suite-pill-icon">🏦</span>
+              <span class="suite-pill-text"><strong>immoFINANCE</strong> zur Finanzierungsvorbereitung</span>
+              <span class="suite-pill-arrow">➔</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- 2. Primary Pricing & CTA Action -->
+        <div class="hero-pricing-action">
+          <div class="price-display">
+            <div class="price-current-group">
+              <span class="price-old-red">53,80 €</span>
+              <span class="price-current">39,95 €</span>
+            </div>
+            <span class="price-saving-badge-red">🎉 Spare 25% beim Kauf!</span>
+          </div>
+
+          <a href="#pricing" class="btn btn-slate btn-lg" id="hero-cta-btn">
+            <span>In den Warenkorb</span>
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M4.16663 10H15.8333M15.8333 10L10.8333 5M15.8333 10L10.8333 15" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </a>
+        </div>
+
+        <!-- 3. Trust & Security Signals directly below CTA -->
+        <div class="hero-trust-signals">
+          <span class="trust-sig-item">⭐ <strong>5.0</strong> Bewertung (5/5)</span>
+          <span class="trust-sig-dot">•</span>
+          <span class="trust-sig-item">⚡ <strong>Sofort-Download</strong> (.xlsx)</span>
+          <span class="trust-sig-dot">•</span>
+          <span class="trust-sig-item">🛡️ <strong>100%</strong> steuerlich absetzbar</span>
+        </div>
+      </div>
+
+      <!-- Right: Clickable 3D Hero Illustration + Bottom Action Bar Below -->
+      <div class="hero-visual">
+        <div class="mockup-container">
+          
+          <!-- Clickable Product Image leading directly to the Video -->
+          <a href="#video" class="hero-image-link" title="🎬 Klicke hier, um das Produkt- &amp; Erklärvideo anzusehen">
+            <img src="assets/images/bundle_suite_3d_v5.jpg" alt="immoBUNDLE 3D Übersicht: immoCALC, immoFINANCE, immoCHECK, immoPLACE (Hier klicken für Video)" class="main-bundle-img" width="540" height="540">
+          </a>
+
+          <!-- Live-Review Plakette below 3D Product Image -->
+          <div class="mockup-bottom-bar">
+            <a href="#reviews" class="hero-live-review-card" title="Zu allen 500+ Kundenbewertungen">
+              <div class="live-review-top">
+                <div class="live-review-stars">⭐⭐⭐⭐⭐</div>
+                <span class="live-review-verified">✓ Verifizierter Kauf</span>
+              </div>
+              <p class="live-review-quote">
+                „<strong>Unverzichtbar.</strong> Hat mir sehr bei meiner Entscheidung geholfen und mich auf einige Punkte aufmerksam gemacht, die ich vorher nicht wusste.“
+              </p>
+              <div class="live-review-author">
+                <img src="assets/images/avatar_alexander.jpg" alt="Alexander V." class="live-review-avatar-img" width="44" height="44">
+                <div class="live-review-meta">
+                  <span class="live-review-name">Alexander V.</span>
+                  <span class="live-review-role">Erstkäufer (Eigentumswohnung)</span>
+                </div>
+                <span class="live-review-link-icon">➔</span>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       3. TRUST BAR (Original USPs)
+       ========================================================================= -->
+  <section class="trust-bar">
+    <div class="container">
+      <div class="trust-items">
+        <div class="trust-item">
+          <div class="trust-item-icon">⚡</div>
+          <div class="trust-item-text">
+            <strong>Sofortiger Download</strong>
+            <span>Direkt nach dem Kauf als XLSX</span>
+          </div>
+        </div>
+        <div class="trust-item">
+          <div class="trust-item-icon">🛡️</div>
+          <div class="trust-item-text">
+            <strong>100% Datenschutz</strong>
+            <span>Funktioniert vollständig offline auf deinem PC</span>
+          </div>
+        </div>
+        <div class="trust-item">
+          <div class="trust-item-icon">💻</div>
+          <div class="trust-item-text">
+            <strong>Einfach bedienbar</strong>
+            <span>Für Microsoft Excel (Windows/Mac) &amp; Numbers</span>
+          </div>
+        </div>
+        <div class="trust-item">
+          <div class="trust-item-icon">✉️</div>
+          <div class="trust-item-text">
+            <strong>Support bei Fragen</strong>
+            <span>Schnelle &amp; unkomplizierte Hilfe per E-Mail</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section product-value-section" id="product-value">
+    <div class="container">
+
+      <!-- ONE Unified Cohesive Story Frame (Leitgedanke + Herausforderungen + Lösung) -->
+      <div class="problem-solution-unified-container">
+
+        <!-- Grand Manifesto Master Header (Eindeutige Hauptüberschrift) -->
+        <div class="story-manifesto-header">
+          <h2 class="manifesto-main-title">
+            Große Investition. <span class="highlight-blue">Smarte Entscheidung.</span>
+          </h2>
+          <p class="manifesto-main-subtitle">
+            Ein Immobilienkauf ist für die meisten Menschen die größte finanzielle Investition ihres Lebens. Wer hunderttausende Euro investiert, darf sich nicht auf Bauchgefühl oder oberflächliche Makler-Exposés verlassen.
+          </p>
+        </div>
+
+        <!-- TOP: The 3 Problem Cards + Integrated Video -->
+        <div class="unified-problem-part">
+
+          <!-- Large Blue Pill Badge centered above the 3 Problem Cards -->
+          <div class="unified-part-header">
+            <span class="badge badge-story-blue">DIE HERAUSFORDERUNGEN</span>
+          </div>
+
+          <!-- 3 Problem Cards -->
+          <div class="problem-cards-row">
+
+            <!-- Problem 1: Informationsflut -->
+            <div class="problem-card">
+              <div class="problem-card-icon">🌪️</div>
+              <h3>Erschlagende Informationsflut</h3>
+              <p>
+                Hunderte Kennzahlen, komplizierte Klauseln und unübersichtliche Dokumente machen es extrem schwer, das
+                Wesentliche objektiv zu erfassen.
+              </p>
+            </div>
+
+            <!-- Problem 2: Hoher Impact -->
+            <div class="problem-card">
+              <div class="problem-card-icon">⏳</div>
+              <h3>Hoher, jahrzehntelanger Impact</h3>
+              <p>
+                Eine Immobilie bindet dein Kapital über Jahrzehnte. Fehlentscheidungen schränken die finanzielle
+                Freiheit langfristig ein und kosten schnell 5-stellige Summen.
+              </p>
+            </div>
+
+            <!-- Problem 3: Unsicherheit beim 1. Kauf -->
+            <div class="problem-card">
+              <div class="problem-card-icon">❓</div>
+              <h3>Unsicherheit beim ersten Kauf</h3>
+              <p>
+                Ohne jahrelange Praxiserfahrung weiß kaum jemand, worauf bei Bausubstanz, Lage und Kaufpreis wirklich zu
+                achten ist – eine Entscheidung „aus dem Bauch heraus“ wird zum Risiko.
+              </p>
+            </div>
+
+          </div>
+
+          <!-- Integrated Video Frame inside the Frame -->
+          <div class="integrated-video-stage" id="video">
+            <div class="video-player-wrapper">
+              <div class="video-frame-container" id="video-container">
+
+                <!-- Poster Thumbnail with Animated Pulse Play Button -->
+                <div class="video-poster-overlay" id="video-poster-overlay" role="button" aria-label="Video abspielen"
+                  tabindex="0">
+                  <div class="video-play-btn-pulse">
+                    <div class="video-play-triangle"></div>
+                  </div>
+                  <div class="video-poster-title">immoBUNDLE – Produkt- &amp; Erklärvideo</div>
+                  <div class="video-poster-sub">▶ Klicke hier, um das Video zu starten (ca. 2 Min.)</div>
+                </div>
+
+                <iframe id="product-video-iframe" width="100%" height="100%"
+                  data-src="https://www.youtube-nocookie.com/embed/dQw4w9WgXcQ?autoplay=1"
+                  title="immoANALYSIS immoBUNDLE Produktvideo" frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen>
+                </iframe>
+
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- BOTTOM: The immoBUNDLE Solution Part with Centered Header and Couple Image -->
+        <div class="unified-solution-part" id="solution">
+
+          <!-- Centered Solution Header with 'DIE LÖSUNG' Badge -->
+          <div class="solution-header-centered">
+            <span class="badge badge-story-blue">DIE LÖSUNG</span>
+            <h3 class="solution-main-title">Systematisiere deine Kaufentscheidung – <span class="highlight-blue">mit Daten statt Bauchgefühl</span></h3>
+            <p class="solution-main-sub">
+              Das immoBUNDLE nimmt dir die Überforderung. Es filtert das Informationschaos und führt dich mit 4
+              praxiserprobten Excel-Tools Schritt für Schritt zu einer sicheren, rentablen Entscheidung:
+            </p>
+          </div>
+
+          <div class="solution-grid">
+
+            <!-- Left: Concrete Solution Benefits -->
+            <div class="solution-points-list">
+              <div class="solution-point-item">
+                <span class="solution-check">✓</span>
+                <span><strong>Volle Klarheit bei Rendite &amp; Cashflow:</strong> Sofort sehen, ob sich das Objekt
+                  rechnet (vor und nach Steuern).</span>
+              </div>
+              <div class="solution-point-item">
+                <span class="solution-check">✓</span>
+                <span><strong>80+ Mängel-Prüfpunkte:</strong> Versteckte Bauschäden und Sanierungskosten sicher vor dem
+                  Notartermin aufdecken.</span>
+              </div>
+              <div class="solution-point-item">
+                <span class="solution-check">✓</span>
+                <span><strong>Bankenreife Unterlagen:</strong> Bestens vorbereitet für erfolgreiche
+                  Kaufpreisverhandlungen und Top-Zinsen.</span>
+              </div>
+            </div>
+
+            <!-- Right: Circular Visual & Security Badge -->
+            <div class="solution-image-col">
+              <div class="story-circle-frame">
+                <img src="assets/images/buying_house.jpg" alt="Sicherer Immobilienkauf mit immoBUNDLE" width="310"
+                  height="310">
+              </div>
+              <div class="floating-benefit-badge">
+                <span>🛡️</span> <strong>Sicherheit &amp; Durchblick ab Tag 1</strong>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       5. DIE 4 KERN-TOOLS (Was ist im immoBUNDLE enthalten?)
+       ========================================================================= -->
+  <section class="section section-subtle" id="tools">
+    <div class="container">
+      <div class="section-header text-center">
+        <span class="badge badge-slate">DIE 4 IMMOTOOLS</span>
+        <h2>Was ist im immoBUNDLE enthalten?</h2>
+        <p>
+          Das immoBUNDLE vereint vier strukturierte, praxiserprobte Excel-Werkzeuge, die alle Aspekte deiner
+          Immobilienentscheidung abdecken:
+        </p>
+      </div>
+
+      <!-- Interactive Master-Cockpit Showcase (Linear/Apple-Style Suite) -->
+      <div class="cockpit-wrapper">
+
+        <!-- Left Column: 4 Interactive Tool Tabs -->
+        <div class="cockpit-tabs-list" role="tablist" aria-label="immoBUNDLE Werkzeuge">
+
+          <!-- Tab 1: immoCALC -->
+          <div class="cockpit-tab active" data-tool="calc" onclick="switchCockpitTool('calc')" role="tab" aria-selected="true" tabindex="0">
+            <div class="cockpit-tab-header">
+              <div class="cockpit-tab-title">
+                <span class="cockpit-tab-icon-box">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="4" y="2" width="16" height="20" rx="3"></rect>
+                    <line x1="8" y1="6" x2="16" y2="6"></line>
+                    <line x1="16" y1="14" x2="16" y2="18"></line>
+                    <path d="M8 10h.01"></path>
+                    <path d="M12 10h.01"></path>
+                    <path d="M16 10h.01"></path>
+                    <path d="M8 14h.01"></path>
+                    <path d="M12 14h.01"></path>
+                    <path d="M8 18h.01"></path>
+                    <path d="M12 18h.01"></path>
+                  </svg>
+                </span>
+                <div class="cockpit-tab-headings">
+                  <span class="cockpit-tab-name">immoCALC</span>
+                  <span class="cockpit-tab-subline">Wirtschaftlichkeitsanalyse</span>
+                </div>
+              </div>
+              <span class="cockpit-tab-uvp">UVP:&nbsp;14,95&nbsp;€</span>
+            </div>
+            <p class="cockpit-tab-desc">
+              Immobilienrechner zur Wirtschaftlichkeitsanalyse. Trage alle relevanten Zahlen deines Objektes ein und erhalte alle Renditekennzahlen sowie monatlichen Cashflow vor und nach Steuern auf einen Blick.
+            </p>
+          </div>
+
+          <!-- Tab 2: immoCHECK -->
+          <div class="cockpit-tab" data-tool="check" onclick="switchCockpitTool('check')" role="tab" aria-selected="false" tabindex="0">
+            <div class="cockpit-tab-header">
+              <div class="cockpit-tab-title">
+                <span class="cockpit-tab-icon-box">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M9 5H7a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-2"></path>
+                    <rect x="9" y="3" width="6" height="4" rx="1"></rect>
+                    <path d="m9 14 2 2 4-4"></path>
+                  </svg>
+                </span>
+                <div class="cockpit-tab-headings">
+                  <span class="cockpit-tab-name">immoCHECK</span>
+                  <span class="cockpit-tab-subline">Zustand &amp; Mängel</span>
+                </div>
+              </div>
+              <span class="cockpit-tab-uvp">UVP:&nbsp;12,95&nbsp;€</span>
+            </div>
+            <p class="cockpit-tab-desc">
+              Checklisten zur systematischen Zustandsbewertung. Decke Baumängel mit Leichtigkeit auf, plane Sanierungskosten realistisch und verschaffe dir Sicherheit bei jeder Besichtigung.
+            </p>
+          </div>
+
+          <!-- Tab 3: immoPLACE -->
+          <div class="cockpit-tab" data-tool="place" onclick="switchCockpitTool('place')" role="tab" aria-selected="false" tabindex="0">
+            <div class="cockpit-tab-header">
+              <div class="cockpit-tab-title">
+                <span class="cockpit-tab-icon-box">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 2a8 8 0 0 0-8 8c0 5.25 8 12 8 12s8-6.75 8-12a8 8 0 0 0-8-8z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                  </svg>
+                </span>
+                <div class="cockpit-tab-headings">
+                  <span class="cockpit-tab-name">immoPLACE</span>
+                  <span class="cockpit-tab-subline">Standortanalyse</span>
+                </div>
+              </div>
+              <span class="cockpit-tab-uvp">UVP:&nbsp;12,95&nbsp;€</span>
+            </div>
+            <p class="cockpit-tab-desc">
+              Standortanalysetool mit umfangreichen Checklisten und Daten zu fast allen Kommunen in Deutschland zur schnellen und objektiven Bewertung von Makro- und Mikrolage.
+            </p>
+          </div>
+
+          <!-- Tab 4: immoFINANCE -->
+          <div class="cockpit-tab" data-tool="finance" onclick="switchCockpitTool('finance')" role="tab" aria-selected="false" tabindex="0">
+            <div class="cockpit-tab-header">
+              <div class="cockpit-tab-title">
+                <span class="cockpit-tab-icon-box">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="3" y1="21" x2="21" y2="21"></line>
+                    <line x1="3" y1="10" x2="21" y2="10"></line>
+                    <path d="m4 10 8-6 8 6"></path>
+                    <line x1="7" y1="10" x2="7" y2="21"></line>
+                    <line x1="12" y1="10" x2="12" y2="21"></line>
+                    <line x1="17" y1="10" x2="17" y2="21"></line>
+                  </svg>
+                </span>
+                <div class="cockpit-tab-headings">
+                  <span class="cockpit-tab-name">immoFINANCE</span>
+                  <span class="cockpit-tab-subline">Finanzierung &amp; Bank</span>
+                </div>
+              </div>
+              <span class="cockpit-tab-uvp">UVP:&nbsp;12,95&nbsp;€</span>
+            </div>
+            <p class="cockpit-tab-desc">
+              Strukturiere deine Unterlagen für die Bank, vergleiche Darlehensangebote und bereite dein Bankgespräch mit bankenkonformer Haushaltsrechnung optimal vor.
+            </p>
+          </div>
+
+        </div>
+
+        <!-- Right Column: Big Live-Stage Showcase Wrapper -->
+        <div class="cockpit-stage-wrapper" id="cockpitStage">
+
+          <!-- Panel 1: immoCALC -->
+          <div class="cockpit-tool-panel active" id="panel-calc">
+            <div class="cockpit-stage-topbar">
+              <h3 class="cockpit-stage-headline">
+                <span class="cockpit-stage-icon-box">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="4" y="2" width="16" height="20" rx="3"></rect>
+                    <line x1="8" y1="6" x2="16" y2="6"></line>
+                    <line x1="16" y1="14" x2="16" y2="18"></line>
+                    <path d="M8 10h.01"></path>
+                    <path d="M12 10h.01"></path>
+                    <path d="M16 10h.01"></path>
+                    <path d="M8 14h.01"></path>
+                    <path d="M12 14h.01"></path>
+                    <path d="M8 18h.01"></path>
+                    <path d="M12 18h.01"></path>
+                  </svg>
+                </span>
+                <span>immoCALC</span>
+              </h3>
+            </div>
+
+            <div class="cockpit-display-canvas tool-mini-slider" id="slider-calc">
+              <span class="cockpit-canvas-badge" id="counter-calc">1 / 5</span>
+              <div class="tool-slides-container">
+                <div class="tool-slide active">
+                  <img src="assets/images/calc_slide_1.png" alt="immoCALC - Immobilienrechner Übersicht" class="tool-grid-img-square" width="500" height="500">
+                </div>
+                <div class="tool-slide">
+                  <img src="assets/images/calc_slide_2.png" alt="immoCALC - Renditekennzahlen &amp; Cashflow" class="tool-grid-img-square" width="500" height="500">
+                </div>
+                <div class="tool-slide">
+                  <img src="assets/images/calc_slide_3.png" alt="immoCALC - Steuer &amp; AfA-Berechnung" class="tool-grid-img-square" width="500" height="500">
+                </div>
+                <div class="tool-slide">
+                  <img src="assets/images/calc_slide_4.png" alt="immoCALC - Szenarien &amp; Vergleich" class="tool-grid-img-square" width="500" height="500">
+                </div>
+                <div class="tool-slide">
+                  <img src="assets/images/calc_slide_5.png" alt="immoCALC - Gesamtauswertung" class="tool-grid-img-square" width="500" height="500">
+                </div>
+              </div>
+              <button type="button" class="slider-btn prev" onclick="moveToolSlide('calc', -1, event)" aria-label="Vorheriges Bild">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
+              </button>
+              <button type="button" class="slider-btn next" onclick="moveToolSlide('calc', 1, event)" aria-label="Nächstes Bild">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+              </button>
+              <div class="slider-dots-bar">
+                <button type="button" class="slider-dot active" onclick="setToolSlide('calc', 0, event)" aria-label="Bild 1"></button>
+                <button type="button" class="slider-dot" onclick="setToolSlide('calc', 1, event)" aria-label="Bild 2"></button>
+                <button type="button" class="slider-dot" onclick="setToolSlide('calc', 2, event)" aria-label="Bild 3"></button>
+                <button type="button" class="slider-dot" onclick="setToolSlide('calc', 3, event)" aria-label="Bild 4"></button>
+                <button type="button" class="slider-dot" onclick="setToolSlide('calc', 4, event)" aria-label="Bild 5"></button>
+              </div>
+            </div>
+
+            <div class="cockpit-features-row">
+              <div class="cockpit-feature-item"><span class="cockpit-icon-check">✓</span> <span><strong>Brutto- &amp; Nettomietrendite</strong> in Echtzeit</span></div>
+              <div class="cockpit-feature-item"><span class="cockpit-icon-check">✓</span> <span><strong>Monatlicher Cashflow</strong> vor/nach Steuer</span></div>
+              <div class="cockpit-feature-item"><span class="cockpit-icon-check">✓</span> <span><strong>AfA-Steuerberechnung</strong> &amp; Szenarien</span></div>
+              <div class="cockpit-feature-item"><span class="cockpit-icon-check">✓</span> <span><strong>Kaufnebenkosten</strong> aller 16 Bundesländer</span></div>
+            </div>
+          </div>
+
+          <!-- Panel 2: immoCHECK -->
+          <div class="cockpit-tool-panel" id="panel-check">
+            <div class="cockpit-stage-topbar">
+              <h3 class="cockpit-stage-headline">
+                <span class="cockpit-stage-icon-box">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M9 5H7a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-2"></path>
+                    <rect x="9" y="3" width="6" height="4" rx="1"></rect>
+                    <path d="m9 14 2 2 4-4"></path>
+                  </svg>
+                </span>
+                <span>immoCHECK</span>
+              </h3>
+            </div>
+
+            <div class="cockpit-display-canvas tool-mini-slider" id="slider-check">
+              <span class="cockpit-canvas-badge" id="counter-check">1 / 5</span>
+              <div class="tool-slides-container">
+                <div class="tool-slide active">
+                  <img src="assets/images/check_slide_1.png" alt="immoCHECK - Checkliste Besichtigung" class="tool-grid-img-square" width="500" height="500">
+                </div>
+                <div class="tool-slide">
+                  <img src="assets/images/check_slide_2.png" alt="immoCHECK - Bausubstanz &amp; Mängel" class="tool-grid-img-square" width="500" height="500">
+                </div>
+                <div class="tool-slide">
+                  <img src="assets/images/check_slide_3.png" alt="immoCHECK - Sanierungsaufwand" class="tool-grid-img-square" width="500" height="500">
+                </div>
+                <div class="tool-slide">
+                  <img src="assets/images/check_slide_4.png" alt="immoCHECK - Protokoll &amp; Druckansicht" class="tool-grid-img-square" width="500" height="500">
+                </div>
+                <div class="tool-slide">
+                  <img src="assets/images/check_slide_5.png" alt="immoCHECK - Modernisierungsplaner" class="tool-grid-img-square" width="500" height="500">
+                </div>
+              </div>
+              <button type="button" class="slider-btn prev" onclick="moveToolSlide('check', -1, event)" aria-label="Vorheriges Bild">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
+              </button>
+              <button type="button" class="slider-btn next" onclick="moveToolSlide('check', 1, event)" aria-label="Nächstes Bild">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+              </button>
+              <div class="slider-dots-bar">
+                <button type="button" class="slider-dot active" onclick="setToolSlide('check', 0, event)" aria-label="Bild 1"></button>
+                <button type="button" class="slider-dot" onclick="setToolSlide('check', 1, event)" aria-label="Bild 2"></button>
+                <button type="button" class="slider-dot" onclick="setToolSlide('check', 2, event)" aria-label="Bild 3"></button>
+                <button type="button" class="slider-dot" onclick="setToolSlide('check', 3, event)" aria-label="Bild 4"></button>
+                <button type="button" class="slider-dot" onclick="setToolSlide('check', 4, event)" aria-label="Bild 5"></button>
+              </div>
+            </div>
+
+            <div class="cockpit-features-row">
+              <div class="cockpit-feature-item"><span class="cockpit-icon-check">✓</span> <span><strong>80+ Bausubstanz-Prüfpunkte</strong> (Dach, Heizung, Elektrik)</span></div>
+              <div class="cockpit-feature-item"><span class="cockpit-icon-check">✓</span> <span><strong>Baumängel sicher aufdecken</strong> &amp; dokumentieren</span></div>
+              <div class="cockpit-feature-item"><span class="cockpit-icon-check">✓</span> <span><strong>Sanierungs- &amp; Modernisierungsplaner</strong></span></div>
+              <div class="cockpit-feature-item"><span class="cockpit-icon-check">✓</span> <span><strong>Druck- &amp; Tablet-optimiert</strong> für Besichtigungen</span></div>
+            </div>
+          </div>
+
+          <!-- Panel 3: immoPLACE -->
+          <div class="cockpit-tool-panel" id="panel-place">
+            <div class="cockpit-stage-topbar">
+              <h3 class="cockpit-stage-headline">
+                <span class="cockpit-stage-icon-box">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 2a8 8 0 0 0-8 8c0 5.25 8 12 8 12s8-6.75 8-12a8 8 0 0 0-8-8z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                  </svg>
+                </span>
+                <span>immoPLACE</span>
+              </h3>
+            </div>
+
+            <div class="cockpit-display-canvas tool-mini-slider" id="slider-place">
+              <span class="cockpit-canvas-badge" id="counter-place">1 / 5</span>
+              <div class="tool-slides-container">
+                <div class="tool-slide active">
+                  <img src="assets/images/place_slide_1.png" alt="immoPLACE - Standortanalyse Übersicht" class="tool-grid-img-square" width="500" height="500">
+                </div>
+                <div class="tool-slide">
+                  <img src="assets/images/place_slide_2.png" alt="immoPLACE - Makrolage &amp; Kommunen" class="tool-grid-img-square" width="500" height="500">
+                </div>
+                <div class="tool-slide">
+                  <img src="assets/images/place_slide_3.png" alt="immoPLACE - Mikrolage &amp; Infrastruktur" class="tool-grid-img-square" width="500" height="500">
+                </div>
+                <div class="tool-slide">
+                  <img src="assets/images/place_slide_4.png" alt="immoPLACE - Demografie &amp; Wirtschaft" class="tool-grid-img-square" width="500" height="500">
+                </div>
+                <div class="tool-slide">
+                  <img src="assets/images/place_slide_5.png" alt="immoPLACE - Zukunfts-Score" class="tool-grid-img-square" width="500" height="500">
+                </div>
+              </div>
+              <button type="button" class="slider-btn prev" onclick="moveToolSlide('place', -1, event)" aria-label="Vorheriges Bild">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
+              </button>
+              <button type="button" class="slider-btn next" onclick="moveToolSlide('place', 1, event)" aria-label="Nächstes Bild">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+              </button>
+              <div class="slider-dots-bar">
+                <button type="button" class="slider-dot active" onclick="setToolSlide('place', 0, event)" aria-label="Bild 1"></button>
+                <button type="button" class="slider-dot" onclick="setToolSlide('place', 1, event)" aria-label="Bild 2"></button>
+                <button type="button" class="slider-dot" onclick="setToolSlide('place', 2, event)" aria-label="Bild 3"></button>
+                <button type="button" class="slider-dot" onclick="setToolSlide('place', 3, event)" aria-label="Bild 4"></button>
+                <button type="button" class="slider-dot" onclick="setToolSlide('place', 4, event)" aria-label="Bild 5"></button>
+              </div>
+            </div>
+
+            <div class="cockpit-features-row">
+              <div class="cockpit-feature-item"><span class="cockpit-icon-check">✓</span> <span><strong>Daten zu fast allen dt. Kommunen</strong> integriert</span></div>
+              <div class="cockpit-feature-item"><span class="cockpit-icon-check">✓</span> <span><strong>Makrolage:</strong> Wirtschaft, Demografie &amp; Kaufkraft</span></div>
+              <div class="cockpit-feature-item"><span class="cockpit-icon-check">✓</span> <span><strong>Mikrolage:</strong> ÖPNV, Schulen &amp; Infrastruktur</span></div>
+              <div class="cockpit-feature-item"><span class="cockpit-icon-check">✓</span> <span><strong>Mietpreisentwicklung</strong> &amp; Zukunfts-Score</span></div>
+            </div>
+          </div>
+
+          <!-- Panel 4: immoFINANCE -->
+          <div class="cockpit-tool-panel" id="panel-finance">
+            <div class="cockpit-stage-topbar">
+              <h3 class="cockpit-stage-headline">
+                <span class="cockpit-stage-icon-box">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="3" y1="21" x2="21" y2="21"></line>
+                    <line x1="3" y1="10" x2="21" y2="10"></line>
+                    <path d="m4 10 8-6 8 6"></path>
+                    <line x1="7" y1="10" x2="7" y2="21"></line>
+                    <line x1="12" y1="10" x2="12" y2="21"></line>
+                    <line x1="17" y1="10" x2="17" y2="21"></line>
+                  </svg>
+                </span>
+                <span>immoFINANCE</span>
+              </h3>
+            </div>
+
+            <div class="cockpit-display-canvas tool-mini-slider" id="slider-finance">
+              <span class="cockpit-canvas-badge" id="counter-finance">1 / 5</span>
+              <div class="tool-slides-container">
+                <div class="tool-slide active">
+                  <img src="assets/images/finance_slide_1.png" alt="immoFINANCE - Darlehensrechner" class="tool-grid-img-square" width="500" height="500">
+                </div>
+                <div class="tool-slide">
+                  <img src="assets/images/finance_slide_2.png" alt="immoFINANCE - Bankvorbereitung" class="tool-grid-img-square" width="500" height="500">
+                </div>
+                <div class="tool-slide">
+                  <img src="assets/images/finance_slide_3.png" alt="immoFINANCE - Haushaltsrechnung" class="tool-grid-img-square" width="500" height="500">
+                </div>
+                <div class="tool-slide">
+                  <img src="assets/images/finance_slide_4.png" alt="immoFINANCE - Vermögensaufstellung" class="tool-grid-img-square" width="500" height="500">
+                </div>
+                <div class="tool-slide">
+                  <img src="assets/images/finance_slide_5.png" alt="immoFINANCE - Tilgungsplan &amp; Sondertilgung" class="tool-grid-img-square" width="500" height="500">
+                </div>
+              </div>
+              <button type="button" class="slider-btn prev" onclick="moveToolSlide('finance', -1, event)" aria-label="Vorheriges Bild">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
+              </button>
+              <button type="button" class="slider-btn next" onclick="moveToolSlide('finance', 1, event)" aria-label="Nächstes Bild">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+              </button>
+              <div class="slider-dots-bar">
+                <button type="button" class="slider-dot active" onclick="setToolSlide('finance', 0, event)" aria-label="Bild 1"></button>
+                <button type="button" class="slider-dot" onclick="setToolSlide('finance', 1, event)" aria-label="Bild 2"></button>
+                <button type="button" class="slider-dot" onclick="setToolSlide('finance', 2, event)" aria-label="Bild 3"></button>
+                <button type="button" class="slider-dot" onclick="setToolSlide('finance', 3, event)" aria-label="Bild 4"></button>
+                <button type="button" class="slider-dot" onclick="setToolSlide('finance', 4, event)" aria-label="Bild 5"></button>
+              </div>
+            </div>
+
+            <div class="cockpit-features-row">
+              <div class="cockpit-feature-item"><span class="cockpit-icon-check">✓</span> <span><strong>Vollständiger Darlehensrechner</strong> &amp; Annuität</span></div>
+              <div class="cockpit-feature-item"><span class="cockpit-icon-check">✓</span> <span><strong>Bankenkonforme Haushaltsrechnung</strong></span></div>
+              <div class="cockpit-feature-item"><span class="cockpit-icon-check">✓</span> <span><strong>Vermögens- &amp; Eigenkapitalübersicht</strong></span></div>
+              <div class="cockpit-feature-item"><span class="cockpit-icon-check">✓</span> <span><strong>Tilgungsplan</strong> &amp; Sondertilgungs-Simulator</span></div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       6. PRAXIS-ERFAHRUNGEN (3 Echte Fallbeispiele & Storylines)
+       ========================================================================= -->
+  <section class="section testimonials-story-section" id="reviews">
+    <div class="container">
+      <div class="section-header text-center">
+        <span class="badge-story-blue">⭐ 5.0 AUS ÜBER 500+ KUNDENBEWERTUNGEN</span>
+        <h2 class="testimonials-headline">Wie Käufer &amp; Investoren entscheiden</h2>
+        <p class="testimonials-subline">
+          Drei typische Situationen aus der Praxis – vom ersten Wohnungskauf bis zur rentablen Kapitalanlage.
+        </p>
+      </div>
+
+      <!-- 3-Column Real-Life Story Cards -->
+      <div class="testimonials-story-grid">
+
+        <!-- Story 1: Der Erstkäufer (Alexander V.) -->
+        <div class="storyline-card story-card-firsttime">
+          <div class="storyline-card-header">
+            <span class="story-category-tag tag-sky">🏠 ERSTKAUF • SICHERHEIT</span>
+            <div class="story-stars">⭐⭐⭐⭐⭐</div>
+          </div>
+          
+          <h3 class="story-card-title">„Als Laie mit einem klaren System durch die Besichtigung.“</h3>
+          
+          <p class="story-card-text">
+            „Vor der ersten Wohnungsbesichtigung wusste ich nicht genau, worauf ich wirklich achten muss. Mit der Checkliste in <strong>immoCHECK</strong> bin ich Raum für Raum systematisch vorgegangen – vom Alter der Heizung bis zur WEG-Instandhaltungsrücklage. Habe dadurch zwei wesentliche Punkte entdeckt, an die ich vorher gar nicht gedacht hätte. Man geht mit einem völlig anderen Selbstbewusstsein in die Entscheidung.“
+          </p>
+
+          <div class="story-result-box box-sky">
+            <span class="result-box-icon">🛡️</span>
+            <div class="result-box-meta">
+              <span class="result-box-title">Ergebnis:</span>
+              <span class="result-box-val">Systematischer Check &amp; volle Sicherheit vor Ort</span>
+            </div>
+          </div>
+
+          <div class="story-author-footer">
+            <img src="assets/images/avatar_alexander.jpg" alt="Alexander V." class="story-avatar-img" width="46" height="46">
+            <div class="story-author-info">
+              <div class="story-author-name-row">
+                <span class="story-author-name">Alexander V.</span>
+                <span class="story-verified-badge">✓ Verifizierter Kauf</span>
+              </div>
+              <span class="story-author-sub">Erstkäufer (Eigentumswohnung München)</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Story 2: Die Kapitalanlegerin (Julia W.) -->
+        <div class="storyline-card story-card-investor">
+          <div class="storyline-card-header">
+            <span class="story-category-tag tag-blue">📈 KAPITALANLAGE • CASHFLOW</span>
+            <div class="story-stars">⭐⭐⭐⭐⭐</div>
+          </div>
+          
+          <h3 class="story-card-title">„In 15 Minuten gesehen, wie sich das Objekt nach Steuern rechnet.“</h3>
+          
+          <p class="story-card-text">
+            „Der Makler warb mit 6,2 % Bruttorendite. Erst mit der AfA- und Nachsteuer-Kalkulation in <strong>immoCALC</strong> habe ich gesehen, wie sich das Objekt unter realen Bewirtschaftungskosten und Zinsen monatlich verhält. Das Tool spart mir bei jeder neuen Objektprüfung Stunden an Zeit und schützt vor Fehlentscheidungen.“
+          </p>
+
+          <div class="story-result-box box-blue">
+            <span class="result-box-icon">📊</span>
+            <div class="result-box-meta">
+              <span class="result-box-title">Ergebnis:</span>
+              <span class="result-box-val">Echte Nachsteuer-Rendite sofort transparent</span>
+            </div>
+          </div>
+
+          <div class="story-author-footer">
+            <img src="assets/images/avatar_julia.jpg" alt="Julia W." class="story-avatar-img" width="46" height="46">
+            <div class="story-author-info">
+              <div class="story-author-name-row">
+                <span class="story-author-name">Julia W.</span>
+                <span class="story-verified-badge">✓ Verifizierter Kauf</span>
+              </div>
+              <span class="story-author-sub">Privatinvestorin (2 ETWs in NRW)</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Story 3: Die Finanzierung (Thomas K.) -->
+        <div class="storyline-card story-card-finance">
+          <div class="storyline-card-header">
+            <span class="story-category-tag tag-emerald">🏦 FINANZIERUNG • BANKGESPRÄCH</span>
+            <div class="story-stars">⭐⭐⭐⭐⭐</div>
+          </div>
+          
+          <h3 class="story-card-title">„Darlehenszusage innerhalb von 48 Stunden zu Top-Konditionen.“</h3>
+          
+          <p class="story-card-text">
+            „Ich bin mit der aufbereiteten Haushalts- und Vermögensrechnung aus <strong>immoFINANCE</strong> direkt zum Banktermin gegangen. Der Finanzierungsberater war begeistert von der sauberen Vorbereitung – die Prüfung ging reibungslos durch und ich habe direkt die Zusage erhalten.“
+          </p>
+
+          <div class="story-result-box box-emerald">
+            <span class="result-box-icon">⚡</span>
+            <div class="result-box-meta">
+              <span class="result-box-title">Ergebnis:</span>
+              <span class="result-box-val">Schnelle Bankzusage &amp; beste Zinskonditionen</span>
+            </div>
+          </div>
+
+          <div class="story-author-footer">
+            <img src="assets/images/avatar_thomas.jpg" alt="Thomas K." class="story-avatar-img" width="46" height="46">
+            <div class="story-author-info">
+              <div class="story-author-name-row">
+                <span class="story-author-name">Thomas K.</span>
+                <span class="story-verified-badge">✓ Verifizierter Kauf</span>
+              </div>
+              <span class="story-author-sub">Kapitalanleger &amp; Vermieter (Hamburg)</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Trust Stats Bar at Section Bottom -->
+      <div class="marquee-trust-footer" style="margin-top: 3.5rem;">
+        <div class="trust-footer-stat">
+          <span class="stat-num">500+</span>
+          <span class="stat-label">Erfolgreiche Analysen</span>
+        </div>
+        <div class="trust-footer-stat">
+          <span class="stat-num">5.0 / 5.0</span>
+          <span class="stat-label">Kundenzufriedenheit</span>
+        </div>
+        <div class="trust-footer-stat">
+          <span class="stat-num">100%</span>
+          <span class="stat-label">Excel (.xlsx) &amp; Mac</span>
+        </div>
+        <div class="trust-footer-stat">
+          <span class="stat-num">0 €</span>
+          <span class="stat-label">Kein Abo • Einmalkauf</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       6. INTERAKTIVER LIVE-SCHNELLRECHNER
+       ========================================================================= -->
+  <section class="section section-white" id="calculator">
+    <div class="container">
+      <div class="section-header">
+        <span class="badge badge-slate">INTERAKTIVER SCHNELLTEST</span>
+        <h2>Teste die Rechenlogik direkt aus</h2>
+        <p>
+          Wähle ein typisches Szenario oder passe die Schieberegler an, um die Auswirkung von Kaufpreis, Miete und
+          Eigenkapital auf Rendite und Cashflow in Echtzeit zu sehen.
+        </p>
+      </div>
+
+      <div class="calculator-card">
+
+        <!-- Left: Sliders & Presets -->
+        <div class="calc-inputs">
+
+          <!-- Preset Scenario Buttons -->
+          <div class="calc-presets-wrapper">
+            <span class="presets-label">Schnell-Szenario wählen:</span>
+            <div class="presets-buttons">
+              <button class="preset-btn active" data-kaufpreis="220000" data-miete="900" data-ek="20">
+                🟢 2-Zi. ETW Kapitalanlage
+              </button>
+              <button class="preset-btn" data-kaufpreis="450000" data-miete="1650" data-ek="25">
+                🟡 Einfamilienhaus
+              </button>
+              <button class="preset-btn" data-kaufpreis="780000" data-miete="3600" data-ek="20">
+                🔵 Mehrfamilienhaus
+              </button>
+            </div>
+          </div>
+
+          <!-- Kaufpreis Slider -->
+          <div class="slider-group">
+            <div class="slider-header">
+              <label for="calc-kaufpreis" class="slider-label">Kaufpreis der Immobilie:</label>
+              <span class="slider-val-badge" id="val-kaufpreis">220.000 €</span>
+            </div>
+            <input type="range" id="calc-kaufpreis" min="50000" max="1000000" step="5000" value="220000">
+          </div>
+
+          <!-- Mieteinnahmen Slider -->
+          <div class="slider-group">
+            <div class="slider-header">
+              <label for="calc-miete" class="slider-label">Monatliche Kaltmiete:</label>
+              <span class="slider-val-badge" id="val-miete">900 € / Mo.</span>
+            </div>
+            <input type="range" id="calc-miete" min="200" max="5000" step="25" value="900">
+          </div>
+
+          <!-- Eigenkapital Slider -->
+          <div class="slider-group">
+            <div class="slider-header">
+              <label for="calc-ek" class="slider-label">Eigenkapital-Anteil:</label>
+              <span class="slider-val-badge" id="val-ek">20 % (44.000 €)</span>
+            </div>
+            <input type="range" id="calc-ek" min="0" max="50" step="5" value="20">
+          </div>
+
+          <!-- Detailed Cost Breakdown -->
+          <div class="calc-breakdown-details">
+            <div class="breakdown-row">
+              <span>Kaufpreis:</span> <strong id="bd-kaufpreis" style="color: #FFFFFF;">220.000 €</strong>
+            </div>
+            <div class="breakdown-row">
+              <span>Kaufnebenkosten (ca. 8,5% Notar/Steuer):</span> <span id="bd-nebenkosten">18.700 €</span>
+            </div>
+            <div class="breakdown-row">
+              <span>Kreditbedarf (Darlehen):</span> <span id="bd-darlehen">194.700 €</span>
+            </div>
+            <div class="breakdown-row">
+              <span>Monatl. Bankrate (3,8% Zins + 2,0% Tilgung):</span> <span id="bd-rate">941 € / Mo.</span>
+            </div>
+            <div class="breakdown-row">
+              <span>Instandhaltung &amp; Bewirtschaftung (15%):</span> <span id="bd-instandhaltung">135 € / Mo.</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Results KPI Box & Health Badge -->
+        <div class="calc-results-box">
+
+          <!-- Health Badge / Ampel -->
+          <div class="calc-health-badge health-positive" id="calc-health-badge">
+            <span>🟢</span> <strong>Top Rendite-Deal:</strong> Positiver monatlicher Cashflow &amp; planbarer
+            Vermögensaufbau!
+          </div>
+
+          <div class="calc-kpi-item">
+            <div class="kpi-title">Bruttomietrendite</div>
+            <div class="kpi-number neutral" id="kpi-brutto-rendite">4,91 %</div>
+          </div>
+
+          <div class="calc-kpi-item">
+            <div class="kpi-title">Nettomietrendite (nach Kosten)</div>
+            <div class="kpi-number neutral" id="kpi-netto-rendite">3,84 %</div>
+          </div>
+
+          <div class="calc-kpi-item">
+            <div class="kpi-title">Monatlicher Cashflow (vor Steuer)</div>
+            <div class="kpi-number" id="kpi-cashflow">+145 € / Mo.</div>
+          </div>
+
+          <div class="calc-kpi-item">
+            <div class="kpi-title">Eigenkapitalrendite (inkl. Tilgung)</div>
+            <div class="kpi-number neutral" id="kpi-ek-rendite">12,80 %</div>
+          </div>
+
+          <a href="#pricing" class="btn btn-primary-emerald btn-block">Vollständige Analyse im immoBUNDLE
+            freischalten</a>
+          <span class="calc-cta-note">Inklusive AfA-Steuerberechnung, 80+ Mängel-Checklisten &amp; Kommunendaten</span>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       7. VERGLEICHSTABELLE
+       ========================================================================= -->
+  <section class="section section-subtle" id="vergleich">
+    <div class="container">
+      <div class="section-header">
+        <span class="badge badge-slate">TRANSPARENTER VERGLEICH</span>
+        <h2>Warum das immoBUNDLE unschlagbar ist</h2>
+        <p>
+          Vergleiche selbst: Professionelle Werkzeuge ohne teure Monats-Abos oder fehleranfällige Bastellösungen.
+        </p>
+      </div>
+
+      <div class="comparison-table-wrapper">
+        <table class="comparison-table">
+          <thead>
+            <tr>
+              <th>Feature / Leistung</th>
+              <th class="highlight-col">✨ immoBUNDLE (Komplettpaket)</th>
+              <th>Einzelkauf der Tools</th>
+              <th>Teure PropTech-Software</th>
+              <th>Eigene Excel-Bastelei</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="feature-col-title">Preis</td>
+              <td class="highlight-col"><strong>39,95 € einmalig</strong></td>
+              <td>53,80 € (Summe)</td>
+              <td>29 € – 99 € / Monat (Abo)</td>
+              <td>"Kostenlos", aber 50+ Std. Zeit</td>
+            </tr>
+            <tr>
+              <td class="feature-col-title">Enthaltene Werkzeuge</td>
+              <td class="highlight-col"><span class="table-check">✓</span> Alle 4 Tools (CALC, CHECK, PLACE, FINANCE)
+              </td>
+              <td>Einzelne Dateien</td>
+              <td>Nur Teilbereiche</td>
+              <td><span class="table-cross">✗</span> Unvollständig</td>
+            </tr>
+            <tr>
+              <td class="feature-col-title">100% Offline-Datenschutz</td>
+              <td class="highlight-col"><span class="table-check">✓</span> Daten bleiben auf deinem PC</td>
+              <td><span class="table-check">✓</span> Offline</td>
+              <td><span class="table-cross">✗</span> Cloud-Zwang</td>
+              <td><span class="table-check">✓</span> Offline</td>
+            </tr>
+            <tr>
+              <td class="feature-col-title">Kommunendaten &amp; Bausubstanz</td>
+              <td class="highlight-col"><span class="table-check">✓</span> Vorbereitet für ganz Dtl.</td>
+              <td>Nur bei immoPLACE/CHECK</td>
+              <td><span class="table-cross">✗</span> Oft Aufpreis</td>
+              <td><span class="table-cross">✗</span> Keine Daten</td>
+            </tr>
+            <tr>
+              <td class="feature-col-title">Steuerberechnung (AfA) &amp; Tilgung</td>
+              <td class="highlight-col"><span class="table-check">✓</span> Formelsicher integriert</td>
+              <td>Nur immoCALC / FINANCE</td>
+              <td><span class="table-check">✓</span> Teilweise</td>
+              <td><span class="table-cross">✗</span> Hohes Fehlerrisiko</td>
+            </tr>
+            <tr>
+              <td class="feature-col-title">Sofortiger Start in Microsoft Excel</td>
+              <td class="highlight-col"><span class="table-check">✓</span> Keine Registrierung / Login</td>
+              <td><span class="table-check">✓</span> Sofort</td>
+              <td><span class="table-cross">✗</span> Account &amp; Login nötig</td>
+              <td><span class="table-cross">✗</span> Hohe Einarbeitungszeit</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       8. KUNDENSTIMMEN (Original-Zitate von Anna T., Julia K., Tom B.)
+       ========================================================================= -->
+  <section class="section section-white" id="bewertungen">
+    <div class="container">
+      <div class="section-header">
+        <span class="badge badge-amber">KUNDENSTIMMEN</span>
+        <h2>Was unsere Kunden über das immoBUNDLE sagen</h2>
+        <p>
+          Erfahre, wie Käufer und Investoren von den immoANALYSIS-Vorlagen profitieren:
+        </p>
+      </div>
+
+      <div class="testimonials-grid">
+        <!-- Review 1: Anna T. (Original) -->
+        <div class="testimonial-card">
+          <div>
+            <div class="star-rating">★★★★★</div>
+            <p class="testimonial-quote">
+              "Die Vorlagen sind intuitiv und haben mir geholfen, den Überblick beim Immobilienkauf zu behalten."
+            </p>
+          </div>
+          <div class="testimonial-author">
+            <div class="author-avatar">AT</div>
+            <div>
+              <div class="author-name">Anna T.</div>
+              <div class="author-tag">✓ Verifizierte Käuferin</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Review 2: Julia K. (Original) -->
+        <div class="testimonial-card">
+          <div>
+            <div class="star-rating">★★★★★</div>
+            <p class="testimonial-quote">
+              "Nachdem ich meine Immobilie aus verschiedenen Perspektiven analysiert habe, bin ich sicher in meiner
+              Entscheidung."
+            </p>
+          </div>
+          <div class="testimonial-author">
+            <div class="author-avatar">JK</div>
+            <div>
+              <div class="author-name">Julia K.</div>
+              <div class="author-tag">✓ Verifizierte Käuferin</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Review 3: Tom B. (Original) -->
+        <div class="testimonial-card">
+          <div>
+            <div class="star-rating">★★★★★</div>
+            <p class="testimonial-quote">
+              "Durch die strukturierte Analyse konnte ich meine Optionen klar vergleichen und fühle mich jetzt gestärkt
+              in meiner Wahl."
+            </p>
+          </div>
+          <div class="testimonial-author">
+            <div class="author-avatar">TB</div>
+            <div>
+              <div class="author-name">Tom B.</div>
+              <div class="author-tag">✓ Verifizierter Käufer</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       9. FAQ SECTION (Original-FAQs von immoanalysis.de)
+       ========================================================================= -->
+  <section class="section section-subtle" id="faq">
+    <div class="container">
+      <div class="section-header">
+        <span class="badge badge-slate">FAQ</span>
+        <h2>Häufig gestellte Fragen</h2>
+        <p>
+          Alles, was du vor dem Erwerb des immoBUNDLEs wissen musst.
+        </p>
+      </div>
+
+      <div class="faq-container">
+
+        <div class="faq-item active">
+          <button class="faq-question">
+            <span>Was ist das immoBUNDLE?</span>
+            <span class="faq-icon">▾</span>
+          </button>
+          <div class="faq-answer">
+            Das immoBUNDLE ist ein Komplettpaket aus vier Excel-Tools – <strong>immoCALC, immoCHECK, immoPLACE und
+              immoFINANCE</strong> – mit denen du Immobilien ganzheitlich analysierst, vergleichst und fundierte
+            Kaufentscheidungen triffst.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>Für wen ist das immoBUNDLE geeignet?</span>
+            <span class="faq-icon">▾</span>
+          </button>
+          <div class="faq-answer">
+            Das immoBUNDLE eignet sich für alle, die eine Immobilie kaufen oder vergleichen möchten – egal ob
+            Eigennutzer, Kapitalanleger oder Einsteiger. Wer Wert auf klare Strukturen und nachvollziehbare Zahlen legt,
+            trifft hier die richtige Wahl.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>Wie läuft der Kauf und die Nutzung der Vorlage ab?</span>
+            <span class="faq-icon">▾</span>
+          </button>
+          <div class="faq-answer">
+            Nach dem Kauf erhältst du einen sofortigen Download-Link per E-Mail. Du kannst die Dateien
+            (XLSX-Dateiformat) direkt öffnen, bearbeiten und speichern. Eine Registrierung oder Installation von
+            zusätzlicher Software ist nicht erforderlich. Lediglich Microsoft Excel sollte auf deinem Computer
+            vorinstalliert sein.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>Muss ich ein spezielles Programm installieren?</span>
+            <span class="faq-icon">▾</span>
+          </button>
+          <div class="faq-answer">
+            Als einzige Voraussetzung benötigst du Microsoft Excel als installierte Software auf deinem Computer.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>Was ist mit Datenschutz und Sicherheit?</span>
+            <span class="faq-icon">▾</span>
+          </button>
+          <div class="faq-answer">
+            Die Vorlagen funktionieren vollständig offline, sodass deine Daten ausschließlich auf deinem eigenen
+            Computer bleiben. Dadurch ist ein maximaler Datenschutz gewährleistet. Wir erheben ausschließlich die
+            Informationen, die für den Bestell- und Zahlungsprozess technisch erforderlich sind.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>Gibt es Unterstützung, falls ich Fragen habe?</span>
+            <span class="faq-icon">▾</span>
+          </button>
+          <div class="faq-answer">
+            Ja, selbstverständlich. Solltest du Fragen haben, hilft dir unser Support per E-Mail gerne weiter. Nutze
+            dafür einfach den Button „Kontakt aufnehmen“ auf unserer Website. Wir antworten schnell und unkompliziert.
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       10. FINAL CONVERSION / PRICING SECTION (Original-Callout)
+       ========================================================================= -->
+  <section class="section section-dark final-cta-section" id="pricing">
+    <div class="container">
+      <div class="final-cta-card">
+
+        <!-- Left: Summary & Original Claim -->
+        <div class="final-cta-content">
+          <span class="badge badge-amber">SPAR-ANGEBOT</span>
+          <h2 style="margin-top: 1rem;">Worauf wartest du?</h2>
+          <p>
+            Hol' dir jetzt dein immoBUNDLE und nimm deinen Immobilienkauf in die Hand!
+          </p>
+
+          <div style="display: flex; flex-direction: column; gap: 0.75rem; margin-bottom: 2rem;">
+            <div style="display: flex; align-items: center; gap: 0.65rem; color: #34D399; font-weight: 600;">
+              <span>⚡</span> Sofortiger Download nach dem Kauf (XLSX)
+            </div>
+            <div style="display: flex; align-items: center; gap: 0.65rem; color: #34D399; font-weight: 600;">
+              <span>🛡️</span> 100% Offline-Nutzung &amp; maximaler Datenschutz
+            </div>
+            <div style="display: flex; align-items: center; gap: 0.65rem; color: #34D399; font-weight: 600;">
+              <span>💻</span> Einfach bedienbar in Microsoft Excel
+            </div>
+            <div style="display: flex; align-items: center; gap: 0.65rem; color: #34D399; font-weight: 600;">
+              <span>✉️</span> Support bei Fragen
+            </div>
+          </div>
+
+          <div class="guarantee-badges-row" style="justify-content: flex-start;">
+            <img src="assets/images/trust1.png" alt="Sicherheit &amp; Qualität" style="height: 48px; width: auto;">
+            <img src="assets/images/trust2.png" alt="Trust Badge" style="height: 48px; width: auto;">
+            <span style="font-size: 0.75rem; color: #CBD5E1; max-width: 210px; line-height: 1.4;">
+              Geprüfte Qualität von immoANALYSIS.
+            </span>
+          </div>
+        </div>
+
+        <!-- Right: Order Box Card -->
+        <div class="final-order-box">
+          <div class="order-box-header">
+            <div>
+              <strong style="font-size: 1.15rem; color: var(--color-slate-dark); display: block;">immoBUNDLE
+                Komplettpaket</strong>
+              <span style="font-size: 0.75rem; color: #64748B;">Artikel-Nr. IBUND-202303</span>
+            </div>
+            <span class="badge badge-amber">SPARE 25%</span>
+          </div>
+
+          <ul class="order-items-list">
+            <li><span>📊 immoCALC (zur Immobilienkalkulation)</span> <span>14,95 €</span></li>
+            <li><span>🔍 immoCHECK (zur Zustandsbewertung)</span> <span>12,95 €</span></li>
+            <li><span>📍 immoPLACE (zur Standortanalyse)</span> <span>12,95 €</span></li>
+            <li><span>🏦 immoFINANCE (zur Finanzierungsvorbereitung)</span> <span>12,95 €</span></li>
+            <li style="border-top: 1px dashed var(--border-medium); padding-top: 0.5rem;">
+              <span>Regulärer Einzelpreis:</span> <span><s>53,80 €</s></span>
+            </li>
+            <li class="discount-line">
+              <span>Bundle-Sparvorteil (25%):</span> <span>- 13,85 €</span>
+            </li>
+          </ul>
+
+          <div class="order-total-row">
+            <div>
+              <span style="font-size: 0.8125rem; color: #64748B; display: block;">Gesamtpreis (inkl. MwSt.):</span>
+              <span style="font-size: 0.75rem; color: var(--color-accent-emerald-dark); font-weight: bold;">Kein Abo,
+                Einmalzahlung</span>
+            </div>
+            <span class="order-total-price">39,95 €</span>
+          </div>
+
+          <a href="https://www.immoanalysis.de/product-page/immobundle" class="btn btn-slate btn-block btn-lg"
+            id="checkout-btn">
+            <span>In den Warenkorb</span>
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M4.16663 10H15.8333M15.8333 10L10.8333 15" stroke="currentColor" stroke-width="2.2"
+                stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </a>
+
+          <!-- Payment Icons -->
+          <div style="text-align: center; margin-top: 0.5rem;">
+            <span style="font-size: 0.75rem; color: #64748B; display: block; margin-bottom: 0.4rem;">Sichere Bezahlung
+              via:</span>
+            <div class="payment-methods-row" style="font-size: 0.8125rem; font-weight: 600; color: #475569;">
+              <span>PayPal</span> • <span>Kreditkarte</span> • <span>Klarna</span> • <span>Apple Pay</span> •
+              <span>SEPA</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       11. STICKY BOTTOM CONVERSION BAR
+       ========================================================================= -->
+  <div class="sticky-bottom-bar" id="sticky-bar">
+    <div class="container sticky-bar-container">
+      <div class="sticky-bar-info">
+        <span class="sticky-bar-title">immoBUNDLE – Alle 4 Excel-Tools</span>
+        <span class="sticky-bar-price">39,95 € <s
+            style="font-size: 0.875rem; color: #94A3B8; font-weight: normal;">53,80 €</s></span>
+      </div>
+      <a href="#pricing" class="btn btn-slate btn-sm">In den Warenkorb (-25%) ➔</a>
+    </div>
+  </div>
+
+  <!-- =========================================================================
+       12. FOOTER (Matching Corporate Identity)
+       ========================================================================= -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+
+        <!-- Brand Info -->
+        <div class="footer-brand">
+          <img src="assets/images/logo.png" alt="immoANALYSIS Logo" width="160" height="36">
+          <p>
+            immoANALYSIS liefert praxisorientierte, verlässliche Excel-Tools und Rechner für Käufer, Kapitalanleger und
+            Investoren in ganz Deutschland.
+          </p>
+        </div>
+
+        <!-- Products -->
+        <div class="footer-col">
+          <h4>immoTOOLS</h4>
+          <ul class="footer-links">
+            <li><a href="#tools" onclick="switchToolTab('tab-calc')">immoCALC (Wirtschaftlichkeit)</a></li>
+            <li><a href="#tools" onclick="switchToolTab('tab-check')">immoCHECK (Zustandsbewertung)</a></li>
+            <li><a href="#tools" onclick="switchToolTab('tab-place')">immoPLACE (Standortanalyse)</a></li>
+            <li><a href="#tools" onclick="switchToolTab('tab-finance')">immoFINANCE (Finanzierung)</a></li>
+            <li><a href="#pricing" style="color: #34D399; font-weight: bold;">immoBUNDLE (Komplettpaket)</a></li>
+          </ul>
+        </div>
+
+        <!-- Ratgeber & Rechner -->
+        <div class="footer-col">
+          <h4>Ratgeber &amp; Wissen</h4>
+          <ul class="footer-links">
+            <li><a href="https://www.immoanalysis.de/ratgeber-immobilien-finanzierung">Finanzierungs-Ratgeber</a></li>
+            <li><a href="https://www.immoanalysis.de/ratgeber-immobilien-steuern">Recht &amp; Steuern</a></li>
+            <li><a href="https://www.immoanalysis.de/ratgeber-immobilien-kapitalanlage">Kapitalanlage &amp;
+                Vermietung</a></li>
+            <li><a href="https://www.immoanalysis.de/immowiki">immoWIKI &amp; Glossar</a></li>
+            <li><a href="https://www.immoanalysis.de/renditerechner">Kostenloser Renditerechner</a></li>
+          </ul>
+        </div>
+
+        <!-- Legal & Support -->
+        <div class="footer-col">
+          <h4>Rechtliches &amp; Kontakt</h4>
+          <ul class="footer-links">
+            <li><a href="https://www.immoanalysis.de/kontakt">Kontakt aufnehmen</a></li>
+            <li><a href="https://www.immoanalysis.de/impressum">Impressum</a></li>
+            <li><a href="https://www.immoanalysis.de/datenschutz">Datenschutz</a></li>
+            <li><a href="https://www.immoanalysis.de/agb">AGB</a></li>
+            <li><a href="https://www.immoanalysis.de/vertrag-widerrufen">Vertrag widerrufen</a></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <div>
+          &copy; 2026 immoANALYSIS. Alle Rechte vorbehalten.
+        </div>
+        <div class="footer-legal-links">
+          <a href="https://www.immoanalysis.de/impressum">Impressum</a>
+          <a href="https://www.immoanalysis.de/datenschutz">Datenschutz</a>
+          <a href="https://www.immoanalysis.de/agb">AGB</a>
+          <a href="https://www.immoanalysis.de/vertrag-widerrufen">Widerruf</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Core Scripts -->
+  <script src="js/calculator.js?v=8.4"></script>
+  <script src="js/app.js?v=8.4"></script>
+</body>
+
+</html>
