@@ -52,12 +52,17 @@
             <span class="price-saving-badge-red">🎉 Spare 25% beim Kauf!</span>
           </div>
 
-          <a href="javascript:void(0)" onclick="triggerWixCart(event)" class="btn btn-slate btn-lg" id="hero-cta-btn" style="cursor: pointer;">
-            <span>In den Warenkorb</span>
-            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M4.16663 10H15.8333M15.8333 10L10.8333 5M15.8333 10L10.8333 15" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-          </a>
+          <div class="hero-cta-group" style="display: flex; align-items: center; gap: 1rem; flex-wrap: wrap;">
+            <a href="https://www.immoanalysis.de/product-page/immobundle" target="_top" class="btn btn-emerald btn-lg hero-btn-primary" id="hero-buy-now-btn" style="background: linear-gradient(135deg, #10B981 0%, #059669 100%); color: #FFFFFF; font-weight: 800; text-decoration: none; padding: 1rem 1.75rem; border-radius: 10px; box-shadow: 0 4px 15px rgba(16, 185, 129, 0.35); display: inline-flex; align-items: center; gap: 0.5rem;">
+              <span>⚡ Jetzt direkt kaufen (39,95 €)</span>
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M4.16663 10H15.8333M15.8333 10L10.8333 5M15.8333 10L10.8333 15" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </a>
+            <button class="btn btn-slate-outline btn-lg hero-btn-secondary" onclick="addToCartFeedback(this)" id="hero-cart-btn" style="background: #FFFFFF; color: #1E293B; border: 1.5px solid #CBD5E1; font-weight: 700; padding: 0.95rem 1.4rem; border-radius: 10px; cursor: pointer; display: inline-flex; align-items: center; gap: 0.4rem;">
+              <span>🛒 In den Warenkorb</span>
+            </button>
+          </div>
         </div>
 
         <!-- 3. Trust & Security Signals directly below CTA -->
@@ -1217,7 +1222,14 @@
             <span class="order-total-price">39,95 €</span>
           </div>
 
-          <a href="javascript:void(0)" onclick="triggerWixCart(event)" class="btn btn-emerald btn-block btn-lg pulse-animation" id="checkout-btn" style="background: linear-gradient(135deg, #10B981 0%, #059669 100%); color: #FFFFFF; font-weight: 800; font-size: 1.1rem; display: flex; align-items: center; justify-content: center; gap: 0.5rem; text-decoration: none; padding: 1.1rem 1.5rem; border-radius: 10px; box-shadow: 0 4px 15px rgba(16, 185, 129, 0.35); cursor: pointer;"><span>In den Warenkorb (39,95 €)</span> ➔</a>
+          <div class="order-cta-group" style="display: flex; flex-direction: column; gap: 0.65rem;">
+            <a href="https://www.immoanalysis.de/product-page/immobundle" target="_top" class="btn btn-emerald btn-block btn-lg pulse-animation" id="checkout-btn" style="background: linear-gradient(135deg, #10B981 0%, #059669 100%); color: #FFFFFF; font-weight: 800; font-size: 1.1rem; text-decoration: none; padding: 1.1rem 1.5rem; border-radius: 10px; box-shadow: 0 4px 15px rgba(16, 185, 129, 0.35); display: flex; align-items: center; justify-content: center; gap: 0.5rem; width: 100%; box-sizing: border-box;">
+              <span>⚡ Jetzt direkt kaufen (39,95 €)</span> ➔
+            </a>
+            <button class="btn btn-slate-outline btn-block btn-md" onclick="addToCartFeedback(this)" id="order-cart-btn" style="background: #FFFFFF; color: #1E293B; border: 1.5px solid #CBD5E1; font-weight: 700; padding: 0.8rem 1.2rem; border-radius: 10px; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 0.4rem; width: 100%; box-sizing: border-box;">
+              <span>🛒 In den Warenkorb legen</span>
+            </button>
+          </div>
 
           <!-- Payment Icons -->
           <div style="text-align: center; margin-top: 0.5rem;">
@@ -1238,26 +1250,19 @@
        11. STICKY BOTTOM CONVERSION BAR
        ========================================================================= -->
   <div class="sticky-bottom-bar" id="sticky-bar">
-    <div class="container sticky-bar-container">
+    <div class="container sticky-bar-container" style="display: flex; align-items: center; justify-content: space-between;">
       <div class="sticky-bar-info">
         <span class="sticky-bar-title">immoBUNDLE – Alle 4 Excel-Tools</span>
-        <span class="sticky-bar-price">39,95 € <s
-            style="font-size: 0.875rem; color: #94A3B8; font-weight: normal;">53,80 €</s></span>
+        <span class="sticky-bar-price">39,95 € <s style="font-size: 0.875rem; color: #94A3B8; font-weight: normal;">53,80 €</s></span>
       </div>
-      <a href="javascript:void(0)" onclick="triggerWixCart(event)" class="btn btn-slate btn-sm" style="cursor: pointer;">In den Warenkorb (-25%) ➔</a>
+      <div class="sticky-bar-actions" style="display: flex; align-items: center; gap: 0.75rem;">
+        <button class="btn btn-slate-outline btn-sm" onclick="addToCartFeedback(this)" style="background: #FFFFFF; color: #1E293B; border: 1.5px solid #CBD5E1; font-weight: 700; padding: 0.5rem 0.9rem; border-radius: 8px; cursor: pointer;">🛒 In den Warenkorb</button>
+        <a href="https://www.immoanalysis.de/product-page/immobundle" target="_top" class="btn btn-emerald btn-sm" style="background: linear-gradient(135deg, #10B981 0%, #059669 100%); color: #FFFFFF; font-weight: 800; text-decoration: none; padding: 0.55rem 1.1rem; border-radius: 8px; box-shadow: 0 2px 8px rgba(16, 185, 129, 0.35);">⚡ Direkt kaufen (39,95 €) ➔</a>
+      </div>
     </div>
   </div>
 
-
-    <div class="toast-actions">
-      <a href="https://www.immoanalysis.de/cart" target="_top" class="btn btn-emerald btn-xs">Zur Kasse ➔</a>
-      <button class="toast-close-btn" onclick="hideCartToast()">✕</button>
-    </div>
-  </div>
-
-<!-- =========================================================================
-       PERFEKT FORMATIERTES TOAST-POPUP (100% SICHERES DESIGN)
-       ========================================================================= -->
+  <!-- Toast Notification -->
   <div class="cart-toast-notification" id="cartToastNotification" style="position: fixed; bottom: 24px; right: 24px; background: #0F172A; color: #FFFFFF; padding: 0.9rem 1.25rem; border-radius: 12px; box-shadow: 0 12px 35px rgba(0,0,0,0.35); display: flex; align-items: center; gap: 1.25rem; z-index: 99999999; border: 1px solid rgba(255,255,255,0.15); transform: translateY(150%); opacity: 0; transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.35s ease; max-width: 460px; box-sizing: border-box; font-family: 'Plus Jakarta Sans', system-ui, sans-serif;">
     <div style="display: flex; align-items: center; gap: 0.75rem;">
       <span style="background: #10B981; color: #FFFFFF; width: 28px; height: 28px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 0.9rem; flex-shrink: 0;">✓</span>
