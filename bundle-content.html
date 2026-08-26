@@ -53,15 +53,12 @@
           </div>
 
           <div class="hero-cta-group" style="display: flex; align-items: center; gap: 1rem; flex-wrap: wrap;">
-            <a href="https://www.immoanalysis.de/product-page/immobundle" target="_top" class="btn btn-emerald btn-lg hero-btn-primary" id="hero-buy-now-btn" style="background: linear-gradient(135deg, #10B981 0%, #059669 100%); color: #FFFFFF; font-weight: 800; text-decoration: none; padding: 1rem 1.75rem; border-radius: 10px; box-shadow: 0 4px 15px rgba(16, 185, 129, 0.35); display: inline-flex; align-items: center; gap: 0.5rem;">
-              <span>⚡ Sofortkauf (39,95 €)</span>
+            <a href="#pricing" class="btn btn-emerald btn-lg hero-btn-primary" id="hero-buy-now-btn" style="background: linear-gradient(135deg, #10B981 0%, #059669 100%); color: #FFFFFF; font-weight: 800; text-decoration: none; padding: 1rem 1.75rem; border-radius: 10px; box-shadow: 0 4px 15px rgba(16, 185, 129, 0.35); display: inline-flex; align-items: center; gap: 0.5rem;">
+              <span>⚡ Jetzt immoBUNDLE sichern (39,95 €)</span>
               <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M4.16663 10H15.8333M15.8333 10L10.8333 5M15.8333 10L10.8333 15" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
               </svg>
             </a>
-            <button class="btn btn-slate-outline btn-lg hero-btn-secondary" onclick="addImmoBundleToCart(event, this)" id="hero-cart-btn" style="background: #FFFFFF; color: #1E293B; border: 1.5px solid #CBD5E1; font-weight: 700; padding: 0.95rem 1.4rem; border-radius: 10px; cursor: pointer; display: inline-flex; align-items: center; gap: 0.4rem;">
-              <span>🛒 In den Warenkorb</span>
-            </button>
           </div>
         </div>
 
@@ -1223,13 +1220,13 @@
           </div>
 
           <!-- Native Wix Cart Button Slot -->
-          <div class="order-cta-group" id="orderCtaGroup" style="display: flex; flex-direction: column; gap: 0.75rem; width: 100%; margin: 1rem 0;">
-            <a href="https://www.immoanalysis.de/product-page/immobundle" target="_top" class="btn btn-emerald btn-block btn-lg pulse-animation" id="checkout-btn" style="background: linear-gradient(135deg, #10B981 0%, #059669 100%); color: #FFFFFF; font-weight: 800; font-size: 1.1rem; text-decoration: none; padding: 1.1rem 1.5rem; border-radius: 10px; box-shadow: 0 4px 15px rgba(16, 185, 129, 0.35); display: flex; align-items: center; justify-content: center; gap: 0.5rem; width: 100%; box-sizing: border-box;">
-              <span>⚡ Jetzt Sofortkauf (39,95 €)</span> ➔
-            </a>
-            <a href="https://www.immoanalysis.de/product-page/immobundle" target="_top" class="btn btn-slate-outline btn-block btn-md" id="order-cart-btn" style="background: #FFFFFF; color: #1E293B; border: 1.5px solid #CBD5E1; font-weight: 700; font-size: 1rem; padding: 0.9rem 1.2rem; border-radius: 10px; text-decoration: none; display: flex; align-items: center; justify-content: center; gap: 0.4rem; width: 100%; box-sizing: border-box;">
-              <span>🛒 In den Warenkorb legen</span>
-            </a>
+          <div class="order-cta-group" id="orderCtaGroup" style="width: 100%; margin: 1rem 0;">
+            <div id="wix-cart-anchor" class="wix-cart-anchor" style="width: 100%; min-height: 54px;">
+              <!-- Fallback: Bleibt sichtbar, bis der echte Wix-Button andockt -->
+              <a href="https://www.immoanalysis.de/product-page/immobundle" target="_top" class="btn btn-emerald btn-block btn-lg pulse-animation" id="checkout-fallback-btn" style="background: linear-gradient(135deg, #10B981 0%, #059669 100%); color: #FFFFFF; font-weight: 800; font-size: 1.1rem; text-decoration: none; padding: 1.1rem 1.5rem; border-radius: 10px; box-shadow: 0 4px 15px rgba(16, 185, 129, 0.35); display: flex; align-items: center; justify-content: center; gap: 0.5rem; width: 100%; box-sizing: border-box;">
+                <span>In den Warenkorb (39,95 €)</span> ➔
+              </a>
+            </div>
           </div>
         </div>
         </div>
@@ -1248,8 +1245,7 @@
         <span class="sticky-bar-price">39,95 € <s style="font-size: 0.875rem; color: #94A3B8; font-weight: normal;">53,80 €</s></span>
       </div>
       <div class="sticky-bar-actions" style="display: flex; align-items: center; gap: 0.75rem;">
-        <button class="btn btn-slate-outline btn-sm" onclick="addImmoBundleToCart(event, this)" style="background: #FFFFFF; color: #1E293B; border: 1.5px solid #CBD5E1; font-weight: 700; padding: 0.5rem 0.9rem; border-radius: 8px; cursor: pointer;">🛒 In den Warenkorb</button>
-        <a href="https://www.immoanalysis.de/product-page/immobundle" target="_top" class="btn btn-emerald btn-sm" style="background: linear-gradient(135deg, #10B981 0%, #059669 100%); color: #FFFFFF; font-weight: 800; text-decoration: none; padding: 0.55rem 1.1rem; border-radius: 8px; box-shadow: 0 2px 8px rgba(16, 185, 129, 0.35);">⚡ Sofortkauf (39,95 €) ➔</a>
+        <a href="#pricing" class="btn btn-emerald btn-sm" style="background: linear-gradient(135deg, #10B981 0%, #059669 100%); color: #FFFFFF; font-weight: 800; text-decoration: none; padding: 0.55rem 1.1rem; border-radius: 8px; box-shadow: 0 2px 8px rgba(16, 185, 129, 0.35);">In den Warenkorb (39,95 €) ➔</a>
       </div>
     </div>
   </div>
