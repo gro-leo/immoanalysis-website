@@ -1219,10 +1219,14 @@
             <span class="order-total-price">39,95 €</span>
           </div>
 
-          <div class="order-cta-group" id="orderCtaGroup">
-            <a href="https://www.immoanalysis.de/product-page/immobundle" target="_top" class="btn btn-emerald btn-block btn-lg pulse-animation" id="checkout-btn" style="background: linear-gradient(135deg, #10B981 0%, #059669 100%); color: #FFFFFF; font-weight: 800; font-size: 1.1rem; text-decoration: none; padding: 1.1rem 1.5rem; border-radius: 10px; box-shadow: 0 4px 15px rgba(16, 185, 129, 0.35); display: flex; align-items: center; justify-content: center; gap: 0.5rem; width: 100%; box-sizing: border-box;">
-              <span>In den Warenkorb (39,95 €)</span> ➔
-            </a>
+          <!-- Native Wix Cart Button Slot -->
+          <div class="order-cta-group" id="orderCtaGroup" style="width: 100%; margin: 1rem 0;">
+            <div id="wix-native-cart-slot" class="wix-native-cart-slot" style="min-height: 55px; width: 100%; display: flex; align-items: center; justify-content: center;">
+              <!-- Platzhalter bis der Wix-Button andockt -->
+              <a href="https://www.immoanalysis.de/product-page/immobundle" target="_top" class="btn btn-emerald btn-block btn-lg pulse-animation" id="checkout-btn" style="background: linear-gradient(135deg, #10B981 0%, #059669 100%); color: #FFFFFF; font-weight: 800; font-size: 1.1rem; text-decoration: none; padding: 1.1rem 1.5rem; border-radius: 10px; box-shadow: 0 4px 15px rgba(16, 185, 129, 0.35); display: flex; align-items: center; justify-content: center; gap: 0.5rem; width: 100%; box-sizing: border-box;">
+                <span>In den Warenkorb (39,95 €)</span> ➔
+              </a>
+            </div>
           </div>
         </div>
 
@@ -1260,3 +1264,26 @@
       <button onclick="hideCartToast()" aria-label="Schließen" style="background: transparent; border: none; color: #94A3B8; font-size: 1.1rem; cursor: pointer; padding: 0.2rem; line-height: 1; transition: color 0.2s;">✕</button>
     </div>
   </div>
+
+<script>
+(function() {
+  function dockNativeWixButton() {
+    var btn = document.getElementById('addToCartButton1') || 
+              document.querySelector('[id*="addToCartButton"], [data-hook="add-to-cart"]');
+    var slot = document.getElementById('wix-native-cart-slot');
+    if (btn && slot && !slot.contains(btn)) {
+      slot.innerHTML = '';
+      slot.appendChild(btn);
+      btn.style.display = 'block';
+      btn.style.visibility = 'visible';
+      btn.style.opacity = '1';
+      btn.style.width = '100%';
+      console.log('[immoANALYSIS] Native Wix Button successfully docked into pricing box!');
+    }
+  }
+
+  dockNativeWixButton();
+  var timer = setInterval(dockNativeWixButton, 400);
+  setTimeout(function() { clearInterval(timer); }, 12000);
+})();
+</script>
