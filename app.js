@@ -233,39 +233,19 @@ function initApp() {
 }
 
 
-// --- 8. Slide-In Mini-Cart Drawer Controller ---
+
+
+// --- 8. Native Wix Mini-Cart Trigger ---
 window.openCartDrawer = function() {
-  const drawer = document.getElementById('cartDrawer');
-  const backdrop = document.getElementById('cartDrawerBackdrop');
-  if (drawer && backdrop) {
-    backdrop.classList.add('active');
-    drawer.classList.add('active');
-    document.body.style.overflow = 'hidden';
+  // Try finding native Wix cart icon/button in Header
+  const wixCart = document.querySelector('#SITE_HEADER a[href*="cart"], #SITE_HEADER button[aria-label*="cart" i], #SITE_HEADER button[aria-label*="warenkorb" i], #SITE_HEADER [data-testid*="cart" i], .cart-icon-wrapper');
+  if (wixCart) {
+    wixCart.click();
+  } else {
+    // Fallback direct checkout/cart page
+    window.top.location.href = "https://www.immoanalysis.de/cart";
   }
 };
-
-window.closeCartDrawer = function() {
-  const drawer = document.getElementById('cartDrawer');
-  const backdrop = document.getElementById('cartDrawerBackdrop');
-  if (drawer && backdrop) {
-    backdrop.classList.remove('active');
-    drawer.classList.remove('active');
-    document.body.style.overflow = '';
-  }
-};
-
-window.proceedToCheckout = function(e) {
-  if (e) e.preventDefault();
-  // Direct redirect to Wix checkout or cart
-  window.top.location.href = "https://www.immoanalysis.de/cart";
-};
-
-// Close drawer on ESC key
-document.addEventListener('keydown', (e) => {
-  if (e.key === 'Escape') {
-    window.closeCartDrawer();
-  }
-});
 
 if (document.readyState === 'loading') {
   document.addEventListener('DOMContentLoaded', initApp);
