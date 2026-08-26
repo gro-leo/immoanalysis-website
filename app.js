@@ -232,45 +232,43 @@ function initApp() {
   }
 }
 
-// --- 8. Add-to-Cart Interactive Feedback & Toast Notification ---
+// --- 8. Add-to-Cart Feedback & Toast Controller ---
 window.addToCartFeedback = function(btnElement) {
   // 1. Visual button animation
   if (btnElement) {
     const originalText = btnElement.innerHTML;
     btnElement.innerHTML = '<span>✓ Im Warenkorb!</span>';
-    btnElement.classList.add('added-success');
+    btnElement.style.background = '#ECFDF5';
+    btnElement.style.borderColor = '#10B981';
+    btnElement.style.color = '#065F46';
     setTimeout(() => {
       btnElement.innerHTML = originalText;
-      btnElement.classList.remove('added-success');
+      btnElement.style.background = '';
+      btnElement.style.borderColor = '';
+      btnElement.style.color = '';
     }, 2500);
   }
 
-  // 2. Update all Cart badges (Header & Custom)
+  // 2. Update all Cart badges
   const headerBadges = document.querySelectorAll('.cart-badge, [data-testid*="cart-badge"], .floating-cart-badge');
   headerBadges.forEach(b => { b.textContent = '1'; });
 
-  // 3. Show Toast Notification
+  // 3. Show Styled Toast Notification
   const toast = document.getElementById('cartToastNotification');
   if (toast) {
-    toast.classList.add('show');
+    toast.style.transform = 'translateY(0)';
+    toast.style.opacity = '1';
     clearTimeout(window.toastTimer);
     window.toastTimer = setTimeout(() => {
-      toast.classList.remove('show');
-    }, 5000);
-  }
-
-  // 4. Try opening native Wix Cart sidebar if available
-  const wixCart = document.querySelector(
-    '#SITE_HEADER a[href*="cart"], #SITE_HEADER button[aria-label*="Warenkorb" i], #SITE_HEADER button[aria-label*="Cart" i], #SITE_HEADER [data-testid*="cart" i]'
-  );
-  if (wixCart) {
-    wixCart.click();
+      window.hideCartToast();
+    }, 6000);
   }
 };
 
 window.hideCartToast = function() {
   const toast = document.getElementById('cartToastNotification');
   if (toast) {
-    toast.classList.remove('show');
+    toast.style.transform = 'translateY(150%)';
+    toast.style.opacity = '0';
   }
 };
