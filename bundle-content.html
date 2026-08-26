@@ -53,12 +53,15 @@
           </div>
 
           <div class="hero-cta-group" style="display: flex; align-items: center; gap: 1rem; flex-wrap: wrap;">
-            <a href="#pricing" class="btn btn-emerald btn-lg hero-btn-primary" id="hero-buy-now-btn" style="background: linear-gradient(135deg, #10B981 0%, #059669 100%); color: #FFFFFF; font-weight: 800; text-decoration: none; padding: 1rem 1.75rem; border-radius: 10px; box-shadow: 0 4px 15px rgba(16, 185, 129, 0.35); display: inline-flex; align-items: center; gap: 0.5rem;">
-              <span>⚡ Jetzt immoBUNDLE sichern (39,95 €)</span>
+            <a href="https://www.immoanalysis.de/product-page/immobundle" target="_top" class="btn btn-emerald btn-lg hero-btn-primary" id="hero-buy-now-btn" style="background: linear-gradient(135deg, #10B981 0%, #059669 100%); color: #FFFFFF; font-weight: 800; text-decoration: none; padding: 1rem 1.75rem; border-radius: 10px; box-shadow: 0 4px 15px rgba(16, 185, 129, 0.35); display: inline-flex; align-items: center; gap: 0.5rem;">
+              <span>⚡ Sofortkauf (39,95 €)</span>
               <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M4.16663 10H15.8333M15.8333 10L10.8333 5M15.8333 10L10.8333 15" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
               </svg>
             </a>
+            <button class="btn btn-slate-outline btn-lg hero-btn-secondary" onclick="addImmoBundleToCart(event, this)" id="hero-cart-btn" style="background: #FFFFFF; color: #1E293B; border: 1.5px solid #CBD5E1; font-weight: 700; padding: 0.95rem 1.4rem; border-radius: 10px; cursor: pointer; display: inline-flex; align-items: center; gap: 0.4rem;">
+              <span>🛒 In den Warenkorb</span>
+            </button>
           </div>
         </div>
 
@@ -1220,14 +1223,15 @@
           </div>
 
           <!-- Native Wix Cart Button Slot -->
-          <div class="order-cta-group" id="orderCtaGroup" style="width: 100%; margin: 1rem 0;">
-            <div id="wix-native-cart-slot" class="wix-native-cart-slot" style="min-height: 55px; width: 100%; display: flex; align-items: center; justify-content: center;">
-              <!-- Platzhalter bis der Wix-Button andockt -->
-              <a href="https://www.immoanalysis.de/product-page/immobundle" target="_top" class="btn btn-emerald btn-block btn-lg pulse-animation" id="checkout-btn" style="background: linear-gradient(135deg, #10B981 0%, #059669 100%); color: #FFFFFF; font-weight: 800; font-size: 1.1rem; text-decoration: none; padding: 1.1rem 1.5rem; border-radius: 10px; box-shadow: 0 4px 15px rgba(16, 185, 129, 0.35); display: flex; align-items: center; justify-content: center; gap: 0.5rem; width: 100%; box-sizing: border-box;">
-                <span>In den Warenkorb (39,95 €)</span> ➔
-              </a>
-            </div>
+          <div class="order-cta-group" id="orderCtaGroup" style="display: flex; flex-direction: column; gap: 0.75rem; width: 100%; margin: 1rem 0;">
+            <a href="https://www.immoanalysis.de/product-page/immobundle" target="_top" class="btn btn-emerald btn-block btn-lg pulse-animation" id="checkout-btn" style="background: linear-gradient(135deg, #10B981 0%, #059669 100%); color: #FFFFFF; font-weight: 800; font-size: 1.1rem; text-decoration: none; padding: 1.1rem 1.5rem; border-radius: 10px; box-shadow: 0 4px 15px rgba(16, 185, 129, 0.35); display: flex; align-items: center; justify-content: center; gap: 0.5rem; width: 100%; box-sizing: border-box;">
+              <span>⚡ Sofortkauf immoBUNDLE (39,95 €)</span> ➔
+            </a>
+            <button class="btn btn-slate-outline btn-block btn-md" onclick="addImmoBundleToCart(event, this)" id="order-cart-btn" style="background: #FFFFFF; color: #1E293B; border: 1.5px solid #CBD5E1; font-weight: 700; font-size: 1rem; padding: 0.9rem 1.2rem; border-radius: 10px; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 0.4rem; width: 100%; box-sizing: border-box; transition: all 0.2s ease;">
+              <span>🛒 In den Warenkorb legen</span>
+            </button>
           </div>
+        </div>
         </div>
 
       </div>
@@ -1244,8 +1248,8 @@
         <span class="sticky-bar-price">39,95 € <s style="font-size: 0.875rem; color: #94A3B8; font-weight: normal;">53,80 €</s></span>
       </div>
       <div class="sticky-bar-actions" style="display: flex; align-items: center; gap: 0.75rem;">
-        <button class="btn btn-slate-outline btn-sm" onclick="addToCartFeedback(this)" style="background: #FFFFFF; color: #1E293B; border: 1.5px solid #CBD5E1; font-weight: 700; padding: 0.5rem 0.9rem; border-radius: 8px; cursor: pointer;">🛒 In den Warenkorb</button>
-        <a href="https://www.immoanalysis.de/product-page/immobundle" onclick="directBuyAction(event)" target="_top" class="btn btn-emerald btn-sm" style="background: linear-gradient(135deg, #10B981 0%, #059669 100%); color: #FFFFFF; font-weight: 800; text-decoration: none; padding: 0.55rem 1.1rem; border-radius: 8px; box-shadow: 0 2px 8px rgba(16, 185, 129, 0.35);">⚡ Direkt kaufen (39,95 €) ➔</a>
+        <button class="btn btn-slate-outline btn-sm" onclick="addImmoBundleToCart(event, this)" style="background: #FFFFFF; color: #1E293B; border: 1.5px solid #CBD5E1; font-weight: 700; padding: 0.5rem 0.9rem; border-radius: 8px; cursor: pointer;">🛒 In den Warenkorb</button>
+        <a href="https://www.immoanalysis.de/product-page/immobundle" target="_top" class="btn btn-emerald btn-sm" style="background: linear-gradient(135deg, #10B981 0%, #059669 100%); color: #FFFFFF; font-weight: 800; text-decoration: none; padding: 0.55rem 1.1rem; border-radius: 8px; box-shadow: 0 2px 8px rgba(16, 185, 129, 0.35);">⚡ Sofortkauf (39,95 €) ➔</a>
       </div>
     </div>
   </div>
@@ -1266,24 +1270,55 @@
   </div>
 
 <script>
-(function() {
-  function dockNativeWixButton() {
-    var btn = document.getElementById('addToCartButton1') || 
-              document.querySelector('[id*="addToCartButton"], [data-hook="add-to-cart"]');
-    var slot = document.getElementById('wix-native-cart-slot');
-    if (btn && slot && !slot.contains(btn)) {
-      slot.innerHTML = '';
-      slot.appendChild(btn);
-      btn.style.display = 'block';
-      btn.style.visibility = 'visible';
-      btn.style.opacity = '1';
-      btn.style.width = '100%';
-      console.log('[immoANALYSIS] Native Wix Button successfully docked into pricing box!');
+window.addImmoBundleToCart = function(e, btn) {
+  if (e) e.preventDefault();
+
+  // 1. Sende Nachricht an Wix Velo
+  try {
+    window.postMessage('WIX_ADD_IMMOBUNDLE', '*');
+    if (window.top && window.top !== window) {
+      window.top.postMessage('WIX_ADD_IMMOBUNDLE', '*');
     }
+  } catch (err) {
+    console.warn('postMessage error:', err);
   }
 
-  dockNativeWixButton();
-  var timer = setInterval(dockNativeWixButton, 400);
-  setTimeout(function() { clearInterval(timer); }, 12000);
-})();
+  // 2. Button Animation & Feedback
+  if (btn) {
+    var orig = btn.innerHTML;
+    btn.innerHTML = '<span>✓ Im Warenkorb!</span>';
+    btn.style.background = '#ECFDF5';
+    btn.style.borderColor = '#10B981';
+    btn.style.color = '#065F46';
+    setTimeout(function() {
+      btn.innerHTML = orig;
+      btn.style.background = '';
+      btn.style.borderColor = '';
+      btn.style.color = '';
+    }, 2500);
+  }
+
+  // 3. Header Warenkorb-Icon auf 1 setzen
+  var badges = document.querySelectorAll('.cart-badge, [data-testid*="cart-badge"], .floating-cart-badge');
+  badges.forEach(function(b) { b.textContent = '1'; });
+
+  // 4. Toast Popup einblenden
+  var toast = document.getElementById('cartToastNotification');
+  if (toast) {
+    toast.style.transform = 'translateY(0)';
+    toast.style.opacity = '1';
+    clearTimeout(window.toastTimer);
+    window.toastTimer = setTimeout(function() {
+      window.hideCartToast();
+    }, 5000);
+  }
+};
+
+window.hideCartToast = function() {
+  var toast = document.getElementById('cartToastNotification');
+  if (toast) {
+    toast.style.transform = 'translateY(150%)';
+    toast.style.opacity = '0';
+  }
+};
 </script>
