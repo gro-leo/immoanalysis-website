@@ -1347,3 +1347,104 @@
     <span class="floating-cart-text">Warenkorb (39,95 €)</span>
     <span class="floating-cart-badge">1</span>
   </button>
+
+<!-- =========================================================================
+       13. SLIDE-IN MINI-WARENKORB (SIDE-DRAWER & DIREKT-CHECKOUT)
+       ========================================================================= -->
+  <div class="cart-drawer-backdrop" id="cartDrawerBackdrop" onclick="closeCartDrawer()"></div>
+
+  <div class="cart-drawer" id="cartDrawer" role="dialog" aria-modal="true" aria-labelledby="cartDrawerTitle">
+    <!-- Header -->
+    <div class="cart-drawer-header">
+      <div class="cart-drawer-header-left">
+        <span class="cart-icon-pulse">🛒</span>
+        <h3 id="cartDrawerTitle">Dein Warenkorb <span class="cart-count-pill">1 Artikel</span></h3>
+      </div>
+      <button class="cart-drawer-close" onclick="closeCartDrawer()" aria-label="Warenkorb schließen">✕</button>
+    </div>
+
+    <!-- Success Message when added -->
+    <div class="cart-drawer-benefit">
+      <span>✅ <strong>immoBUNDLE</strong> wurde erfolgreich hinzugefügt!</span>
+    </div>
+
+    <!-- Body -->
+    <div class="cart-drawer-body">
+      <!-- Product Item Card -->
+      <div class="cart-item-card">
+        <div class="cart-item-img-wrap">
+          <img src="https://gro-leo.github.io/immoanalysis-website/assets/images/bundle_suite_3d_v5.jpg" alt="immoBUNDLE Komplettpaket" width="72" height="72">
+        </div>
+        <div class="cart-item-info">
+          <div class="cart-item-title-row">
+            <h4 class="cart-item-title">immoBUNDLE</h4>
+            <span class="cart-item-price">39,95 €</span>
+          </div>
+          <p class="cart-item-subtitle">4-in-1 Excel-Toolbox (.xlsx)</p>
+          <div class="cart-item-tags">
+            <span class="cart-tag">💎 Alle 4 Tools</span>
+            <span class="cart-tag-save">-25% Rabatt</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Guarantees Checklist -->
+      <div class="cart-guarantees">
+        <div class="cart-guarantee-item">
+          <span class="cart-check-icon">✓</span>
+          <span><strong>Enthalten:</strong> immoCALC, immoCHECK, immoPLACE &amp; immoFINANCE</span>
+        </div>
+        <div class="cart-guarantee-item">
+          <span class="cart-check-icon">✓</span>
+          <span><strong>Sofort-Download (.xlsx):</strong> Direkt nach dem Kauf verfügbar</span>
+        </div>
+        <div class="cart-guarantee-item">
+          <span class="cart-check-icon">✓</span>
+          <span><strong>Lebenslange Lizenz:</strong> Einmalzahlung, kein Abo</span>
+        </div>
+        <div class="cart-guarantee-item">
+          <span class="cart-check-icon">✓</span>
+          <span><strong>100% steuerlich absetzbar</strong> als Betriebsausgabe / Werbungskosten</span>
+        </div>
+      </div>
+
+      <!-- Trust Box -->
+      <div class="cart-trust-box">
+        <div class="cart-trust-title">🔒 100% Sichere 256-Bit SSL-Verschlüsselung</div>
+        <div class="cart-payment-methods">
+          <span class="pay-pill">PayPal</span>
+          <span class="pay-pill">Kreditkarte</span>
+          <span class="pay-pill">Apple Pay</span>
+          <span class="pay-pill">Klarna</span>
+          <span class="pay-pill">Google Pay</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer: Total & Direct Checkout CTA -->
+    <div class="cart-drawer-footer">
+      <div class="cart-subtotal-row">
+        <span class="subtotal-label">Gesamtsumme:</span>
+        <div class="subtotal-prices">
+          <span class="subtotal-old">53,80 €</span>
+          <span class="subtotal-current">39,95 €</span>
+        </div>
+      </div>
+
+      <a href="https://www.immoanalysis.de/cart" class="btn btn-emerald btn-lg btn-block cart-checkout-btn" onclick="proceedToWixCheckout(event)">
+        <span>🔒 Jetzt zur Kasse (39,95 €)</span>
+        <span class="btn-arrow">➔</span>
+      </a>
+
+      <button class="cart-continue-btn" onclick="closeCartDrawer()">
+        ← Weiter auf der Seite umsehen
+      </button>
+    </div>
+  </div>
+
+  <!-- Floating Fast Cart Trigger Button -->
+  <button class="floating-cart-btn" id="floatingCartBtn" onclick="openCartDrawer()" title="Warenkorb ansehen">
+    <span class="floating-cart-icon">🛒</span>
+    <span class="floating-cart-text">Warenkorb (39,95 €)</span>
+    <span class="floating-cart-badge">1</span>
+  </button>
