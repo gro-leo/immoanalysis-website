@@ -232,19 +232,45 @@ function initApp() {
   }
 }
 
-// --- 8. Variante B: Open Wix Native Cart Sidebar ---
-window.triggerWixCart = function(e) {
-  if (e) e.preventDefault();
+// --- 8. Add-to-Cart Interactive Feedback & Toast Notification ---
+window.addToCartFeedback = function(btnElement) {
+  // 1. Visual button animation
+  if (btnElement) {
+    const originalText = btnElement.innerHTML;
+    btnElement.innerHTML = '<span>✓ Im Warenkorb!</span>';
+    btnElement.classList.add('added-success');
+    setTimeout(() => {
+      btnElement.innerHTML = originalText;
+      btnElement.classList.remove('added-success');
+    }, 2500);
+  }
 
-  // 1. Suche das native Wix-Warenkorb-Icon im Header
+  // 2. Update all Cart badges (Header & Custom)
+  const headerBadges = document.querySelectorAll('.cart-badge, [data-testid*="cart-badge"], .floating-cart-badge');
+  headerBadges.forEach(b => { b.textContent = '1'; });
+
+  // 3. Show Toast Notification
+  const toast = document.getElementById('cartToastNotification');
+  if (toast) {
+    toast.classList.add('show');
+    clearTimeout(window.toastTimer);
+    window.toastTimer = setTimeout(() => {
+      toast.classList.remove('show');
+    }, 5000);
+  }
+
+  // 4. Try opening native Wix Cart sidebar if available
   const wixCart = document.querySelector(
-    '#SITE_HEADER a[href*="cart"], #SITE_HEADER button[aria-label*="Warenkorb" i], #SITE_HEADER button[aria-label*="Cart" i], #SITE_HEADER [data-testid*="cart" i], header a[href*="cart"], header [data-testid*="cart" i], [data-mesh-id*="cart"]'
+    '#SITE_HEADER a[href*="cart"], #SITE_HEADER button[aria-label*="Warenkorb" i], #SITE_HEADER button[aria-label*="Cart" i], #SITE_HEADER [data-testid*="cart" i]'
   );
-
   if (wixCart) {
     wixCart.click();
-  } else {
-    // Falls das Menü noch nicht voll geladen ist: Fallback direkt zum Warenkorb
-    window.top.location.href = "https://www.immoanalysis.de/cart";
+  }
+};
+
+window.hideCartToast = function() {
+  const toast = document.getElementById('cartToastNotification');
+  if (toast) {
+    toast.classList.remove('show');
   }
 };

@@ -1247,3 +1247,18 @@
       <a href="javascript:void(0)" onclick="triggerWixCart(event)" class="btn btn-slate btn-sm" style="cursor: pointer;">In den Warenkorb (-25%) ➔</a>
     </div>
   </div>
+
+<!-- Toast Notification when added to cart -->
+  <div class="cart-toast-notification" id="cartToastNotification">
+    <div class="toast-content">
+      <span class="toast-icon">✓</span>
+      <div class="toast-text">
+        <strong>immoBUNDLE hinzugefügt!</strong>
+        <span>1 Artikel im Warenkorb (39,95 €)</span>
+      </div>
+    </div>
+    <div class="toast-actions">
+      <a href="https://www.immoanalysis.de/cart" target="_top" class="btn btn-emerald btn-xs">Zur Kasse ➔</a>
+      <button class="toast-close-btn" onclick="hideCartToast()">✕</button>
+    </div>
+  </div>
